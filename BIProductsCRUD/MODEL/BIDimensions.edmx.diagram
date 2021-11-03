@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f23c0ff519874d96af2a8c20a7ac66fa" Name="Diagram1" ZoomLevel="100">
+        <EntityTypeShape EntityType="BI.DimensionsModel.AUX_SYSTEM" Width="1.5" PointX="9.5" PointY="3" IsExpanded="true" FillColor="Cornsilk" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.D01_PRODUCTS" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" FillColor="Teal" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.HOM_Brand" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" FillColor="Cornsilk" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.HOM_Flavor" Width="1.5" PointX="4.75" PointY="3" IsExpanded="true" FillColor="Cornsilk" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.HOM_Presentation" Width="1.5" PointX="6.375" PointY="0.75" IsExpanded="true" FillColor="Cornsilk" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.HOM_ProductGroup" Width="1.5" PointX="6.375" PointY="3" IsExpanded="true" FillColor="Cornsilk" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.HOM_Size" Width="1.5" PointX="4.75" PointY="4.875" IsExpanded="true" FillColor="Cornsilk" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.HOM_Source" Width="1.5" PointX="6.375" PointY="4.875" IsExpanded="true" FillColor="Cornsilk" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.HOM_SubBrand" Width="1.5" PointX="8" PointY="0.75" IsExpanded="true" FillColor="Cornsilk" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.HOM_SubCategory" Width="1.5" PointX="7.875" PointY="3" IsExpanded="true" FillColor="Cornsilk" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.HOM_TypeBrand" Width="1.5" PointX="8.125" PointY="5" IsExpanded="true" FillColor="Cornsilk" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.M01_Brand" Width="1.5" PointX="4.75" PointY="7.125" IsExpanded="true" FillColor="Cornsilk" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.M01_Category" Width="1.5" PointX="6.75" PointY="7.125" IsExpanded="true" FillColor="Cornsilk" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.M01_Flavor" Width="1.5" PointX="8.75" PointY="7.125" IsExpanded="true" FillColor="Cornsilk" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.M01_POT_Status" Width="1.5" PointX="10.375" PointY="7.125" IsExpanded="true" FillColor="Cornsilk" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.M01_Presentation" Width="1.5" PointX="9.75" PointY="5.125" IsExpanded="true" FillColor="Cornsilk" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.M01_ProductGroup" Width="1.5" PointX="9.625" PointY="0.75" IsExpanded="true" FillColor="Cornsilk" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.M01_Products" Width="1.5" PointX="1.125" PointY="0.75" IsExpanded="true" FillColor="Red" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.M01_Size" Width="1.5" PointX="11.375" PointY="5.125" IsExpanded="true" FillColor="Cornsilk" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.M01_Source" Width="1.5" PointX="11.25" PointY="0.75" IsExpanded="true" FillColor="Cornsilk" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.M01_SubBrand" Width="1.5" PointX="12.875" PointY="3" IsExpanded="true" FillColor="Cornsilk" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.M01_SubCategory" Width="1.5" PointX="13" PointY="5.125" IsExpanded="true" FillColor="Cornsilk" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.M01_TypeBrand" Width="1.5" PointX="11.125" PointY="3" IsExpanded="true" FillColor="Cornsilk" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.M01_TypeOFSales" Width="1.5" PointX="13" PointY="0.75" IsExpanded="true" FillColor="Cornsilk" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.D02_CUSTOMERS" Width="1.5" PointX="2.75" PointY="9" FillColor="Teal" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.D05_GEOGRAPHY" Width="1.5" PointX="2.75" PointY="14.125" FillColor="Teal" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.HOM_Branch" Width="1.5" PointX="4.5" PointY="18.5" FillColor="255, 128, 0" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.HOM_Chain" Width="1.5" PointX="6.25" PointY="9.125" FillColor="Fuchsia" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.HOM_CustomerCategory" Width="1.5" PointX="6.25" PointY="11.25" FillColor="Fuchsia" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.HOM_District" Width="1.5" PointX="6.125" PointY="14.125" FillColor="255, 128, 0" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.HOM_PayMethod" Width="1.5" PointX="9.625" PointY="9.125" FillColor="Fuchsia" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.HOM_RSR" Width="1.5" PointX="6.125" PointY="16.25" FillColor="255, 128, 0" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.HOM_TypeRoute" Width="1.5" PointX="6.125" PointY="21.125" FillColor="255, 128, 0" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.M02_Category" Width="1.5" PointX="4.625" PointY="11.125" FillColor="Fuchsia" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.M02_Chain" Width="1.5" PointX="4.625" PointY="9.125" FillColor="Fuchsia" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.M02_Customers" Width="1.5" PointX="1.125" PointY="9" FillColor="Red" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.M02_KeyAccount" Width="1.5" PointX="8" PointY="11.125" FillColor="Fuchsia" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.M02_PayMtMthod" Width="1.5" PointX="8" PointY="9.125" FillColor="Fuchsia" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.M05_Branch" Width="1.5" PointX="6.125" PointY="18.5" FillColor="255, 128, 0" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.M05_Country" Width="1.5" PointX="4.5" PointY="23.25" FillColor="255, 128, 0" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.M05_District" Width="1.5" PointX="4.5" PointY="14.125" FillColor="255, 128, 0" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.M05_Geography" Width="1.75" PointX="0.875" PointY="14.125" FillColor="Red" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.M05_Market_Unit" Width="1.5" PointX="0.75" PointY="18.75" FillColor="255, 128, 0" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.M05_Route_Representative" Width="1.5" PointX="4.5" PointY="16.25" FillColor="255, 128, 0" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.M05_TypeRoute" Width="1.5" PointX="4.5" PointY="21.125" FillColor="255, 128, 0" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.M05_Zone" Width="1.5" PointX="2.75" PointY="18.75" FillColor="255, 128, 0" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.HOM_Country" Width="1.5" PointX="6.125" PointY="23.25" FillColor="255, 128, 0" />
+        <EntityTypeShape EntityType="BI.DimensionsModel.HOM_keyAccount" Width="1.5" PointX="9.75" PointY="11.25" FillColor="Fuchsia" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,517 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8B8160B9-B3D9-4A0C-A634-BCB01E63E9CB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>DimensionsConfiguration.My.MyApplication</StartupObject>
+    <RootNamespace>DimensionsConfiguration</RootNamespace>
+    <AssemblyName>DimensionsConfiguration</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\11.9.128.60\bis\Intaladores BIS APPS\BIDimensions\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>BI DIMENSIONS</ProductName>
+    <PublisherName>BIS CARICAM</PublisherName>
+    <SuiteName>BI DIMENSIONS</SuiteName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>BIDIMENSIONS.html</WebPage>
+    <ApplicationRevision>20</ApplicationRevision>
+    <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>DimensionsConfiguration.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>DimensionsConfiguration.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>29277DAEDEFB953EEE161C72DF3C36679C13F301</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>DimensionsConfiguration_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="BI.Datamart.Common" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Data.Linq" />
+    <Import Include="System.Data.Linq.Mapping" />
+    <Import Include="System.Data.Linq.SqlClient" />
+    <Import Include="System.Data.Linq.SqlClient.Implementation" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Customers  Homologation\CustomersHomologationMainForm.Designer.vb">
+      <DependentUpon>CustomersHomologationMainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Customers  Homologation\CustomersHomologationMainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers  Homologation\HOMCustomersEditionUC.Designer.vb">
+      <DependentUpon>HOMCustomersEditionUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Customers  Homologation\HOMCustomersEditionUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customers\CustomerEditForm.Designer.vb">
+      <DependentUpon>CustomerEditForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\CustomerEditForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\CustomersConfigForm.Designer.vb">
+      <DependentUpon>CustomersConfigForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\CustomersConfigForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\CustomersMeasuresForm.Designer.vb">
+      <DependentUpon>CustomersMeasuresForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\CustomersMeasuresForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geography  Homologation\GeographyHomologationMainForm.Designer.vb">
+      <DependentUpon>GeographyHomologationMainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Geography  Homologation\GeographyHomologationMainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geography  Homologation\HOMGeographyEditionUC.Designer.vb">
+      <DependentUpon>HOMGeographyEditionUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Geography  Homologation\HOMGeographyEditionUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Geography\GeographyConfigForm.Designer.vb">
+      <DependentUpon>GeographyConfigForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Geography\GeographyConfigForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geography\GeographyEditForm.Designer.vb">
+      <DependentUpon>GeographyEditForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Geography\GeographyEditForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geography\GeographyMeasuresForm.Designer.vb">
+      <DependentUpon>GeographyMeasuresForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Geography\GeographyMeasuresForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Products Homologation\HOMEditionUC.Designer.vb">
+      <DependentUpon>HOMEditionUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Products Homologation\HOMEditionUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Products Homologation\ProductsHomologationMainForm.Designer.vb">
+      <DependentUpon>ProductsHomologationMainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Products Homologation\ProductsHomologationMainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Products\ProductsMeasuresForm.Designer.vb">
+      <DependentUpon>ProductsMeasuresForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Products\ProductsMeasuresForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Products\ProductEditForm.Designer.vb">
+      <DependentUpon>ProductEditForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Products\ProductEditForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Products\ProductsConfigForm.Designer.vb">
+      <DependentUpon>ProductsConfigForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Products\ProductsConfigForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Products\TESTcolorsForm.Designer.vb">
+      <DependentUpon>TESTcolorsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Products\TESTcolorsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Customers  Homologation\CustomersHomologationMainForm.resx">
+      <DependentUpon>CustomersHomologationMainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers  Homologation\HOMCustomersEditionUC.resx">
+      <DependentUpon>HOMCustomersEditionUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\CustomerEditForm.resx">
+      <DependentUpon>CustomerEditForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\CustomersConfigForm.resx">
+      <DependentUpon>CustomersConfigForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\CustomersMeasuresForm.resx">
+      <DependentUpon>CustomersMeasuresForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geography  Homologation\GeographyHomologationMainForm.resx">
+      <DependentUpon>GeographyHomologationMainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geography  Homologation\HOMGeographyEditionUC.resx">
+      <DependentUpon>HOMGeographyEditionUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geography\GeographyConfigForm.resx">
+      <DependentUpon>GeographyConfigForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geography\GeographyEditForm.resx">
+      <DependentUpon>GeographyEditForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geography\GeographyMeasuresForm.resx">
+      <DependentUpon>GeographyMeasuresForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products Homologation\HOMEditionUC.resx">
+      <DependentUpon>HOMEditionUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products Homologation\ProductsHomologationMainForm.resx">
+      <DependentUpon>ProductsHomologationMainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products\ProductsMeasuresForm.resx">
+      <DependentUpon>ProductsMeasuresForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products\ProductEditForm.resx">
+      <DependentUpon>ProductEditForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products\ProductsConfigForm.resx">
+      <DependentUpon>ProductsConfigForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products\TESTcolorsForm.resx">
+      <DependentUpon>TESTcolorsForm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DimensionsConfiguration_TemporaryKey.pfx" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\D01_PRODUCT.datasource" />
+    <None Include="My Project\DataSources\M01_Product.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.vbproj">
+      <Project>{cdae2be0-28e6-4e9e-8527-28e30e3f371f}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.vbproj">
+      <Project>{1d210be2-e0e7-4a25-ac7f-6013dd57d081}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SalesDataMartDML\SalesDataMartDML.vbproj">
+      <Project>{2d8ec1d5-503b-4b31-bcff-0afc9fc35b4f}</Project>
+      <Name>SalesDataMartDML</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sales_StagingDML\Sales_StagingDML.vbproj">
+      <Project>{e2507dd0-98ea-4a16-b7c6-68cc7e7da7e9}</Project>
+      <Name>Sales_StagingDML</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddNewItem_6273.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Central_America1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddWebService_366.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XSLTTransformfile_829_32x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Move.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditRelation_310_32.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action_create_16xMD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\productsButton.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Products homologation.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Central_America.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Geography Homologation.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CustomersButton.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CustomerHomologationButton.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewRow_291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PencilAngled_32xLG_color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveFileDialogControl_703_32.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GotoNextRow_289_color_32.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Legend_32.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Editdatasetwithdesigner_8449.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find_5650_32.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bi dimensions logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Close-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Close-011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoadProfilenode_8711_32.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoadProfilenode_8711.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BreakpointEnabled_6584_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find_5650.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Repair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clearallrequests_8816_24.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BreakpointEnabled_6584_16x1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="BI.Datamart.Common">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="BI.Datamart.DataAccess">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="EntityFramework">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="EntityFramework.SqlServer">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="SalesDataMart.Model">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Sales_Staging.Model">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,1323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SalesDataMartModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="D01_PRODUCTS">
+          <Key>
+            <PropertyRef Name="ProductKey" />
+          </Key>
+          <Property Name="ProductKey" Type="int" Nullable="false" />
+          <Property Name="CountryID" Type="varchar" MaxLength="2" />
+          <Property Name="ProductID" Type="varchar" MaxLength="10" />
+          <Property Name="SAP_ProductCode" Type="varchar" MaxLength="15" />
+          <Property Name="Description" Type="varchar" MaxLength="100" />
+          <Property Name="UnitsPerCase" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="PresentationID" Type="int" />
+          <Property Name="PresentationName" Type="varchar" MaxLength="50" />
+          <Property Name="GroupID" Type="int" />
+          <Property Name="GroupName" Type="varchar" MaxLength="50" />
+          <Property Name="SourceID" Type="int" />
+          <Property Name="SourceName" Type="varchar" MaxLength="50" />
+          <Property Name="CategoryID" Type="int" />
+          <Property Name="CategoryName" Type="varchar" MaxLength="50" />
+          <Property Name="SubCategoryID" Type="int" />
+          <Property Name="SubCategoryName" Type="varchar" MaxLength="50" />
+          <Property Name="BrandID" Type="int" />
+          <Property Name="BrandName" Type="varchar" MaxLength="50" />
+          <Property Name="SubBrandID" Type="int" />
+          <Property Name="SubBrandName" Type="varchar" MaxLength="50" />
+          <Property Name="TypeBrandID" Type="int" />
+          <Property Name="TypeBrandName" Type="varchar" MaxLength="50" />
+          <Property Name="SizeID" Type="int" />
+          <Property Name="SizeName" Type="varchar" MaxLength="50" />
+          <Property Name="FlavorID" Type="int" />
+          <Property Name="FlavorName" Type="varchar" MaxLength="50" />
+          <Property Name="Active_Flag" Type="bit" />
+          <Property Name="SystemOnly" Type="bit" />
+          <Property Name="Flag_innovation" Type="bit" />
+          <Property Name="StartDate_innovation" Type="datetime" />
+          <Property Name="EndDate_innovation" Type="datetime" />
+          <Property Name="PricePoint" Type="money" />
+          <Property Name="POT_StatusID" Type="int" />
+          <Property Name="UnitsForDistribution" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="TypeSalesID" Type="int" />
+          <Property Name="TypeSalesName" Type="varchar" MaxLength="50" />
+          <Property Name="ProductTypeID" Type="int" />
+          <Property Name="ProductTypeName" Type="varchar" MaxLength="50" />
+          <Property Name="GNGID" Type="int" />
+          <Property Name="GNGName" Type="varchar" MaxLength="50" />
+          <Property Name="UPC_Code" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="D02_CUSTOMERS">
+          <Key>
+            <PropertyRef Name="CustomerKey" />
+          </Key>
+          <Property Name="CustomerKey" Type="int" Nullable="false" />
+          <Property Name="CountryID" Type="varchar" MaxLength="2" />
+          <Property Name="CustomerID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="SAP_CustomerCode" Type="varchar" MaxLength="20" />
+          <Property Name="Customer_Name" Type="varchar" MaxLength="100" />
+          <Property Name="KeyAccountID" Type="int" />
+          <Property Name="KeyAccounName" Type="varchar" MaxLength="50" />
+          <Property Name="PayMtID" Type="int" />
+          <Property Name="PayMtMthodName" Type="varchar" MaxLength="50" />
+          <Property Name="ChainID" Type="int" />
+          <Property Name="ChainName" Type="varchar" MaxLength="50" />
+          <Property Name="CategoryID" Type="int" />
+          <Property Name="CategoryName" Type="varchar" MaxLength="50" />
+          <Property Name="WeeklyDROPSize" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="LastSalesDate" Type="datetime" />
+          <Property Name="CreationDate" Type="datetime" />
+          <Property Name="Flag_Active" Type="bit" />
+          <Property Name="SystemOnly" Type="bit" />
+          <Property Name="EventualKey_Client" Type="varchar" MaxLength="1" />
+          <Property Name="Delivery_Area" Type="nvarchar" MaxLength="20" />
+          <Property Name="SAP_LEGACYID" Type="nvarchar" MaxLength="8" />
+        </EntityType>
+        <EntityType Name="D05_GEOGRAPHY">
+          <Key>
+            <PropertyRef Name="GeographicKey" />
+          </Key>
+          <Property Name="GeographicKey" Type="int" Nullable="false" />
+          <Property Name="CountryID" Type="varchar" MaxLength="2" />
+          <Property Name="CountryName" Type="varchar" MaxLength="50" />
+          <Property Name="BranchID" Type="int" />
+          <Property Name="BranchName" Type="varchar" MaxLength="50" />
+          <Property Name="ZoneID" Type="int" />
+          <Property Name="ZoneName" Type="varchar" MaxLength="50" />
+          <Property Name="MUID" Type="int" />
+          <Property Name="Market_Unit" Type="varchar" MaxLength="50" />
+          <Property Name="RouteID" Type="varchar" MaxLength="20" />
+          <Property Name="DistrictID" Type="int" />
+          <Property Name="DistrictName" Type="varchar" MaxLength="50" />
+          <Property Name="RSRId" Type="int" />
+          <Property Name="RSRName" Type="varchar" MaxLength="100" />
+          <Property Name="TypeRouteID" Type="int" />
+          <Property Name="TypeRouteName" Type="varchar" MaxLength="50" />
+          <Property Name="CIPBINID" Type="int" />
+          <Property Name="CIPBINNAME" Type="varchar" MaxLength="50" />
+          <Property Name="Flag_Active" Type="bit" />
+          <Property Name="SystemOnly" Type="bit" />
+        </EntityType>
+        <EntityType Name="M01_Brand">
+          <Key>
+            <PropertyRef Name="BrandID" />
+          </Key>
+          <Property Name="BrandID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BrandName" Type="varchar" MaxLength="50" />
+          <Property Name="Active_Flag" Type="bit" />
+          <Property Name="SystemOnly" Type="bit" />
+        </EntityType>
+        <EntityType Name="M01_Category">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CategoryName" Type="varchar" MaxLength="50" />
+          <Property Name="Active_Flag" Type="bit" />
+          <Property Name="SystemOnly" Type="bit" />
+        </EntityType>
+        <EntityType Name="M01_Flavor">
+          <Key>
+            <PropertyRef Name="FlavorID" />
+          </Key>
+          <Property Name="FlavorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FlavorName" Type="varchar" MaxLength="50" />
+          <Property Name="Active_Flag" Type="bit" />
+          <Property Name="SystemOnly" Type="bit" />
+        </EntityType>
+        <EntityType Name="M01_POT_Status">
+          <Key>
+            <PropertyRef Name="POT_StatusID" />
+          </Key>
+          <Property Name="POT_StatusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="POT_StatusName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="M01_Presentation">
+          <Key>
+            <PropertyRef Name="PresentationID" />
+          </Key>
+          <Property Name="PresentationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PresentationName" Type="varchar" MaxLength="50" />
+          <Property Name="Active_Flag" Type="bit" />
+          <Property Name="SystemOnly" Type="bit" />
+        </EntityType>
+        <EntityType Name="M01_ProductGroup">
+          <Key>
+            <PropertyRef Name="GroupID" />
+          </Key>
+          <Property Name="GroupID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GroupName" Type="varchar" MaxLength="50" />
+          <Property Name="Active_Flag" Type="bit" />
+          <Property Name="SystemOnly" Type="bit" />
+        </EntityType>
+        <EntityType Name="M01_Products">
+          <Key>
+            <PropertyRef Name="ProductKey" />
+          </Key>
+          <Property Name="ProductKey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CountryID" Type="varchar" MaxLength="2" />
+          <Property Name="ProductID" Type="varchar" MaxLength="10" />
+          <Property Name="SAP_ProductCode" Type="varchar" MaxLength="15" />
+          <Property Name="Description" Type="varchar" MaxLength="100" />
+          <Property Name="Grams" Type="numeric" Precision="8" Scale="4" />
+          <Property Name="Standar_Cost" Type="money" />
+          <Property Name="PricePoint" Type="money" />
+          <Property Name="UnitsPerCase" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="PresentationID" Type="int" />
+          <Property Name="GroupID" Type="int" />
+          <Property Name="SourceID" Type="int" />
+          <Property Name="CategoryID" Type="int" />
+          <Property Name="SubCategoryID" Type="int" />
+          <Property Name="BrandID" Type="int" />
+          <Property Name="SubBrandID" Type="int" />
+          <Property Name="TypeBrandID" Type="int" />
+          <Property Name="SizeID" Type="int" />
+          <Property Name="FlavorID" Type="int" />
+          <Property Name="Active_Flag" Type="bit" />
+          <Property Name="SystemOnly" Type="bit" />
+          <Property Name="Flag_innovation" Type="bit" />
+          <Property Name="StartDate_innovation" Type="datetime" />
+          <Property Name="EndDate_innovation" Type="datetime" />
+          <Property Name="POT_StatusID" Type="int" />
+          <Property Name="UnitsForDistribution" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="TypeSalesID" Type="int" />
+          <Property Name="ProductTypeID" Type="int" />
+          <Property Name="GNGId" Type="int" />
+          <Property Name="UPC_Code" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SalesDataMart.dbo.M01_ProductType' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="M01_ProductType">
+          <Key>
+            <PropertyRef Name="ProductTypeID" />
+          </Key>
+          <Property Name="ProductTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductTypeName" Type="varchar" MaxLength="50" />
+          <Property Name="Active_Flag" Type="bit" />
+          <Property Name="SystemOnly" Type="bit" />
+        </EntityType>
+        <EntityType Name="M01_Size">
+          <Key>
+            <PropertyRef Name="SizeID" />
+          </Key>
+          <Property Name="SizeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SizeName" Type="varchar" MaxLength="50" />
+          <Property Name="Active_Flag" Type="bit" />
+          <Property Name="SystemOnly" Type="bit" />
+        </EntityType>
+        <EntityType Name="M01_Source">
+          <Key>
+            <PropertyRef Name="SourceID" />
+          </Key>
+          <Property Name="SourceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SourceName" Type="varchar" MaxLength="50" />
+          <Property Name="Active_Flag" Type="bit" />
+          <Property Name="SystemOnly" Type="bit" />
+        </EntityType>
+        <EntityType Name="M01_SubBrand">
+          <Key>
+            <PropertyRef Name="SubBrandID" />
+          </Key>
+          <Property Name="SubBrandID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SubBrandName" Type="varchar" MaxLength="50" />
+          <Property Name="Active_Flag" Type="bit" />
+          <Property Name="SystemOnly" Type="bit" />
+        </EntityType>
+        <EntityType Name="M01_SubCategory">
+          <Key>
+            <PropertyRef Name="SubCategoryID" />
+          </Key>
+          <Property Name="SubCategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SubCategoryName" Type="varchar" MaxLength="50" />
+          <Property Name="Active_Flag" Type="bit" />
+          <Property Name="SystemOnly" Type="bit" />
+        </EntityType>
+        <EntityType Name="M01_TypeBrand">
+          <Key>
+            <PropertyRef Name="TypeBrandID" />
+          </Key>
+          <Property Name="TypeBrandID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TypeBrandName" Type="varchar" MaxLength="50" />
+          <Property Name="Active_Flag" Type="bit" />
+          <Property Name="SystemOnly" Type="bit" />
+        </EntityType>
+        <EntityType Name="M01_TypeOFSales">
+          <Key>
+            <PropertyRef Name="TypeSalesID" />
+          </Key>
+          <Property Name="TypeSalesID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TypeSalesName" Type="varchar" MaxLength="50" />
+          <Property Name="Active_Flag" Type="bit" />
+          <Property Name="SystemOnly" Type="bit" />
+        </EntityType>
+        <EntityType Name="M02_Category">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CategoryName" Type="varchar" MaxLength="50" />
+          <Property Name="Active_Flag" Type="bit" />
+          <Property Name="SystemOnly" Type="bit" />
+        </EntityType>
+        <EntityType Name="M02_Chain">
+          <Key>
+            <PropertyRef Name="ChainID" />
+          </Key>
+          <Property Name="ChainID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ChainName" Type="varchar" MaxLength="50" />
+          <Property Name="Active_Flag" Type="bit" />
+          <Property Name="SystemOnly" Type="bit" />
+        </EntityType>
+        <EntityType Name="M02_Customers">
+          <Key>
+            <PropertyRef Name="CustomerKey" />
+          </Key>
+          <Property Name="CustomerKey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CountryID" Type="varchar" MaxLength="2" />
+          <Property Name="CustomerID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="SAP_CustomerCode" Type="varchar" MaxLength="20" />
+          <Property Name="Customer_Name" Type="varchar" MaxLength="100" />
+          <Property Name="KeyAccountID" Type="int" />
+          <Property Name="PayMtID" Type="int" />
+          <Property Name="ChainID" Type="int" />
+          <Property Name="CategoryID" Type="int" />
+          <Property Name="WeeklyDROPSize" Type="money" />
+          <Property Name="LastSalesDate" Type="datetime" />
+          <Property Name="CreationDate" Type="datetime" />
+          <Property Name="Flag_Active" Type="bit" />
+          <Property Name="SystemOnly" Type="bit" />
+          <Property Name="EventualKey_Client" Type="varchar" MaxLength="1" />
+          <Property Name="BranchID" Type="int" />
+          <Property Name="Delivery_Area" Type="nvarchar" MaxLength="20" />
+          <Property Name="SAP_LEGACYID" Type="nvarchar" MaxLength="8" />
+        </EntityType>
+        <EntityType Name="M02_KeyAccount">
+          <Key>
+            <PropertyRef Name="KeyAccountID" />
+          </Key>
+          <Property Name="KeyAccountID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KeyAccounName" Type="varchar" MaxLength="50" />
+          <Property Name="Active_Flag" Type="bit" />
+          <Property Name="SystemOnly" Type="bit" />
+        </EntityType>
+        <EntityType Name="M02_PayMtMthod">
+          <Key>
+            <PropertyRef Name="PayMtID" />
+          </Key>
+          <Property Name="PayMtID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PayMtMthodName" Type="varchar" MaxLength="50" />
+          <Property Name="Active_Flag" Type="bit" />
+          <Property Name="SystemOnly" Type="bit" />
+        </EntityType>
+        <EntityType Name="M05_Branch">
+          <Key>
+            <PropertyRef Name="BranchID" />
+          </Key>
+          <Property Name="BranchID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BranchName" Type="varchar" MaxLength="50" />
+          <Property Name="Active_Flag" Type="bit" />
+          <Property Name="SystemOnly" Type="bit" />
+          <Property Name="CostCenter" Type="nvarchar" MaxLength="15" />
+          <Property Name="BenefitCenter" Type="nvarchar" MaxLength="15" />
+          <Property Name="DataWarehouseCenter" Type="nvarchar" MaxLength="15" />
+          <Property Name="ExpenseCenter" Type="nvarchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="M05_Country">
+          <Key>
+            <PropertyRef Name="CountryID" />
+          </Key>
+          <Property Name="CountryID" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="CtryCodeAlpha3" Type="varchar" MaxLength="3" />
+          <Property Name="CtryNumCode" Type="varchar" MaxLength="3" />
+          <Property Name="CountryName" Type="varchar" MaxLength="75" />
+          <Property Name="SystemOnly" Type="bit" />
+        </EntityType>
+        <EntityType Name="M05_District">
+          <Key>
+            <PropertyRef Name="DistrictID" />
+          </Key>
+          <Property Name="DistrictID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DistrictName" Type="varchar" MaxLength="50" />
+          <Property Name="Active_Flag" Type="bit" />
+          <Property Name="SystemOnly" Type="bit" />
+        </EntityType>
+        <EntityType Name="M05_Geography">
+          <Key>
+            <PropertyRef Name="GeographicKey" />
+          </Key>
+          <Property Name="GeographicKey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CountryID" Type="varchar" MaxLength="2" />
+          <Property Name="BranchID" Type="int" />
+          <Property Name="ZoneID" Type="int" />
+          <Property Name="MUID" Type="int" />
+          <Property Name="RouteID" Type="varchar" MaxLength="20" />
+          <Property Name="DistrictID" Type="int" />
+          <Property Name="RSRId" Type="int" />
+          <Property Name="TypeRouteID" Type="int" />
+          <Property Name="CIPBINID" Type="int" />
+          <Property Name="Active_Flag" Type="bit" />
+          <Property Name="SystemOnly" Type="bit" />
+        </EntityType>
+        <EntityType Name="M05_Market_Unit">
+          <Key>
+            <PropertyRef Name="MUID" />
+          </Key>
+          <Property Name="MUID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Market_Unit" Type="varchar" MaxLength="50" />
+          <Property Name="Active_Flag" Type="bit" />
+          <Property Name="SystemOnly" Type="bit" />
+        </EntityType>
+        <EntityType Name="M05_Route_Representative">
+          <Key>
+            <PropertyRef Name="RSRID" />
+          </Key>
+          <Property Name="RSRID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RSRName" Type="varchar" MaxLength="100" />
+          <Property Name="Active_Flag" Type="bit" />
+          <Property Name="SystemOnly" Type="bit" />
+          <Property Name="RSRSourcecode" Type="nvarchar" MaxLength="15" />
+          <Property Name="CountryID" Type="nvarchar" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="M05_TypeRoute">
+          <Key>
+            <PropertyRef Name="TypeRouteID" />
+          </Key>
+          <Property Name="TypeRouteID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TypeRouteName" Type="varchar" MaxLength="50" />
+          <Property Name="Active_Flag" Type="bit" />
+          <Property Name="SystemOnly" Type="bit" />
+        </EntityType>
+        <EntityType Name="M05_Zone">
+          <Key>
+            <PropertyRef Name="ZoneID" />
+          </Key>
+          <Property Name="ZoneID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ZoneName" Type="varchar" MaxLength="50" />
+          <Property Name="Active_Flag" Type="bit" />
+          <Property Name="SystemOnly" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="SalesDataMartModelStoreContainer">
+          <EntitySet Name="D01_PRODUCTS" EntityType="Self.D01_PRODUCTS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="D02_CUSTOMERS" EntityType="Self.D02_CUSTOMERS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="D05_GEOGRAPHY" EntityType="Self.D05_GEOGRAPHY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="M01_Brand" EntityType="Self.M01_Brand" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="M01_Category" EntityType="Self.M01_Category" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="M01_Flavor" EntityType="Self.M01_Flavor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="M01_POT_Status" EntityType="Self.M01_POT_Status" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="M01_Presentation" EntityType="Self.M01_Presentation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="M01_ProductGroup" EntityType="Self.M01_ProductGroup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="M01_Products" EntityType="Self.M01_Products" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="M01_Size" EntityType="Self.M01_Size" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="M01_Source" EntityType="Self.M01_Source" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="M01_SubBrand" EntityType="Self.M01_SubBrand" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="M01_SubCategory" EntityType="Self.M01_SubCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="M01_TypeBrand" EntityType="Self.M01_TypeBrand" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="M01_TypeOFSales" EntityType="Self.M01_TypeOFSales" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="M02_Category" EntityType="Self.M02_Category" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="M02_Chain" EntityType="Self.M02_Chain" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="M02_Customers" EntityType="Self.M02_Customers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="M02_KeyAccount" EntityType="Self.M02_KeyAccount" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="M02_PayMtMthod" EntityType="Self.M02_PayMtMthod" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="M05_Branch" EntityType="Self.M05_Branch" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="M05_Country" EntityType="Self.M05_Country" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="M05_District" EntityType="Self.M05_District" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="M05_Geography" EntityType="Self.M05_Geography" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="M05_Market_Unit" EntityType="Self.M05_Market_Unit" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="M05_Route_Representative" EntityType="Self.M05_Route_Representative" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="M05_TypeRoute" EntityType="Self.M05_TypeRoute" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="M05_Zone" EntityType="Self.M05_Zone" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="M01_ProductType" EntityType="Self.M01_ProductType" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [M01_ProductType].[ProductTypeID] AS [ProductTypeID], 
+    [M01_ProductType].[ProductTypeName] AS [ProductTypeName], 
+    [M01_ProductType].[Active_Flag] AS [Active_Flag], 
+    [M01_ProductType].[SystemOnly] AS [SystemOnly]
+    FROM [dbo].[M01_ProductType] AS [M01_ProductType]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SalesDataMartModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="D01_PRODUCTS">
+          <Key>
+            <PropertyRef Name="ProductKey" />
+          </Key>
+          <Property Name="ProductKey" Type="Int32" Nullable="false" />
+          <Property Name="CountryID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="ProductID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="SAP_ProductCode" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="UnitsPerCase" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="PresentationID" Type="Int32" />
+          <Property Name="PresentationName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="GroupID" Type="Int32" />
+          <Property Name="GroupName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SourceID" Type="Int32" />
+          <Property Name="SourceName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CategoryID" Type="Int32" />
+          <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SubCategoryID" Type="Int32" />
+          <Property Name="SubCategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BrandID" Type="Int32" />
+          <Property Name="BrandName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SubBrandID" Type="Int32" />
+          <Property Name="SubBrandName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TypeBrandID" Type="Int32" />
+          <Property Name="TypeBrandName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SizeID" Type="Int32" />
+          <Property Name="SizeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FlavorID" Type="Int32" />
+          <Property Name="FlavorName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Active_Flag" Type="Boolean" />
+          <Property Name="SystemOnly" Type="Boolean" />
+          <Property Name="Flag_innovation" Type="Boolean" />
+          <Property Name="StartDate_innovation" Type="DateTime" Precision="3" />
+          <Property Name="EndDate_innovation" Type="DateTime" Precision="3" />
+          <Property Name="PricePoint" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="POT_StatusID" Type="Int32" />
+          <Property Name="UnitsForDistribution" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="TypeSalesID" Type="Int32" />
+          <Property Name="TypeSalesName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ProductTypeID" Type="Int32" />
+          <Property Name="ProductTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="GNGID" Type="Int32" />
+          <Property Name="GNGName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UPC_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="D02_CUSTOMERS">
+          <Key>
+            <PropertyRef Name="CustomerKey" />
+          </Key>
+          <Property Name="CustomerKey" Type="Int32" Nullable="false" />
+          <Property Name="CountryID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="CustomerID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SAP_CustomerCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Customer_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="KeyAccountID" Type="Int32" />
+          <Property Name="KeyAccounName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PayMtID" Type="Int32" />
+          <Property Name="PayMtMthodName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ChainID" Type="Int32" />
+          <Property Name="ChainName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CategoryID" Type="Int32" />
+          <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="WeeklyDROPSize" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="LastSalesDate" Type="DateTime" Precision="3" />
+          <Property Name="CreationDate" Type="DateTime" Precision="3" />
+          <Property Name="Flag_Active" Type="Boolean" />
+          <Property Name="SystemOnly" Type="Boolean" />
+          <Property Name="EventualKey_Client" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Delivery_Area" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="SAP_LEGACYID" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="D05_GEOGRAPHY">
+          <Key>
+            <PropertyRef Name="GeographicKey" />
+          </Key>
+          <Property Name="GeographicKey" Type="Int32" Nullable="false" />
+          <Property Name="CountryID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="CountryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BranchID" Type="Int32" />
+          <Property Name="BranchName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ZoneID" Type="Int32" />
+          <Property Name="ZoneName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MUID" Type="Int32" />
+          <Property Name="Market_Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RouteID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DistrictID" Type="Int32" />
+          <Property Name="DistrictName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RSRId" Type="Int32" />
+          <Property Name="RSRName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TypeRouteID" Type="Int32" />
+          <Property Name="TypeRouteName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Flag_Active" Type="Boolean" />
+          <Property Name="SystemOnly" Type="Boolean" />
+          <Property Name="CIPBINID" Type="Int32" />
+          <Property Name="CIPBINNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="M01_Brand">
+          <Key>
+            <PropertyRef Name="BrandID" />
+          </Key>
+          <Property Name="BrandID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BrandName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Active_Flag" Type="Boolean" />
+          <Property Name="SystemOnly" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="M01_Category">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Active_Flag" Type="Boolean" />
+          <Property Name="SystemOnly" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="M01_Flavor">
+          <Key>
+            <PropertyRef Name="FlavorID" />
+          </Key>
+          <Property Name="FlavorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FlavorName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Active_Flag" Type="Boolean" />
+          <Property Name="SystemOnly" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="M01_POT_Status">
+          <Key>
+            <PropertyRef Name="POT_StatusID" />
+          </Key>
+          <Property Name="POT_StatusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="POT_StatusName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="M01_Presentation">
+          <Key>
+            <PropertyRef Name="PresentationID" />
+          </Key>
+          <Property Name="PresentationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PresentationName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Active_Flag" Type="Boolean" />
+          <Property Name="SystemOnly" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="M01_ProductGroup">
+          <Key>
+            <PropertyRef Name="GroupID" />
+          </Key>
+          <Property Name="GroupID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GroupName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Active_Flag" Type="Boolean" />
+          <Property Name="SystemOnly" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="M01_Products">
+          <Key>
+            <PropertyRef Name="ProductKey" />
+          </Key>
+          <Property Name="ProductKey" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CountryID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="ProductID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="SAP_ProductCode" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Grams" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="Standar_Cost" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="PricePoint" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="UnitsPerCase" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="PresentationID" Type="Int32" />
+          <Property Name="GroupID" Type="Int32" />
+          <Property Name="SourceID" Type="Int32" />
+          <Property Name="CategoryID" Type="Int32" />
+          <Property Name="SubCategoryID" Type="Int32" />
+          <Property Name="BrandID" Type="Int32" />
+          <Property Name="SubBrandID" Type="Int32" />
+          <Property Name="TypeBrandID" Type="Int32" />
+          <Property Name="SizeID" Type="Int32" />
+          <Property Name="FlavorID" Type="Int32" />
+          <Property Name="Active_Flag" Type="Boolean" />
+          <Property Name="SystemOnly" Type="Boolean" />
+          <Property Name="Flag_innovation" Type="Boolean" />
+          <Property Name="StartDate_innovation" Type="DateTime" Precision="3" />
+          <Property Name="EndDate_innovation" Type="DateTime" Precision="3" />
+          <Property Name="POT_StatusID" Type="Int32" />
+          <Property Name="UnitsForDistribution" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="TypeSalesID" Type="Int32" />
+          <Property Name="ProductTypeID" Type="Int32" />
+          <Property Name="GNGId" Type="Int32" />
+          <Property Name="UPC_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="M01_Size">
+          <Key>
+            <PropertyRef Name="SizeID" />
+          </Key>
+          <Property Name="SizeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SizeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Active_Flag" Type="Boolean" />
+          <Property Name="SystemOnly" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="M01_Source">
+          <Key>
+            <PropertyRef Name="SourceID" />
+          </Key>
+          <Property Name="SourceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SourceName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Active_Flag" Type="Boolean" />
+          <Property Name="SystemOnly" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="M01_SubBrand">
+          <Key>
+            <PropertyRef Name="SubBrandID" />
+          </Key>
+          <Property Name="SubBrandID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SubBrandName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Active_Flag" Type="Boolean" />
+          <Property Name="SystemOnly" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="M01_SubCategory">
+          <Key>
+            <PropertyRef Name="SubCategoryID" />
+          </Key>
+          <Property Name="SubCategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SubCategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Active_Flag" Type="Boolean" />
+          <Property Name="SystemOnly" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="M01_TypeBrand">
+          <Key>
+            <PropertyRef Name="TypeBrandID" />
+          </Key>
+          <Property Name="TypeBrandID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TypeBrandName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Active_Flag" Type="Boolean" />
+          <Property Name="SystemOnly" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="M01_TypeOFSales">
+          <Key>
+            <PropertyRef Name="TypeSalesID" />
+          </Key>
+          <Property Name="TypeSalesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TypeSalesName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Active_Flag" Type="Boolean" />
+          <Property Name="SystemOnly" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="M02_Category">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Active_Flag" Type="Boolean" />
+          <Property Name="SystemOnly" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="M02_Chain">
+          <Key>
+            <PropertyRef Name="ChainID" />
+          </Key>
+          <Property Name="ChainID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ChainName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Active_Flag" Type="Boolean" />
+          <Property Name="SystemOnly" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="M02_Customers">
+          <Key>
+            <PropertyRef Name="CustomerKey" />
+          </Key>
+          <Property Name="CustomerKey" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CountryID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="CustomerID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SAP_CustomerCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Customer_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="KeyAccountID" Type="Int32" />
+          <Property Name="PayMtID" Type="Int32" />
+          <Property Name="ChainID" Type="Int32" />
+          <Property Name="CategoryID" Type="Int32" />
+          <Property Name="WeeklyDROPSize" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="LastSalesDate" Type="DateTime" Precision="3" />
+          <Property Name="CreationDate" Type="DateTime" Precision="3" />
+          <Property Name="Flag_Active" Type="Boolean" />
+          <Property Name="SystemOnly" Type="Boolean" />
+          <Property Name="EventualKey_Client" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="BranchID" Type="Int32" />
+          <Property Name="Delivery_Area" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="SAP_LEGACYID" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="M02_KeyAccount">
+          <Key>
+            <PropertyRef Name="KeyAccountID" />
+          </Key>
+          <Property Name="KeyAccountID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KeyAccounName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Active_Flag" Type="Boolean" />
+          <Property Name="SystemOnly" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="M02_PayMtMthod">
+          <Key>
+            <PropertyRef Name="PayMtID" />
+          </Key>
+          <Property Name="PayMtID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PayMtMthodName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Active_Flag" Type="Boolean" />
+          <Property Name="SystemOnly" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="M05_Branch">
+          <Key>
+            <PropertyRef Name="BranchID" />
+          </Key>
+          <Property Name="BranchID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BranchName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Active_Flag" Type="Boolean" />
+          <Property Name="SystemOnly" Type="Boolean" />
+          <Property Name="CostCenter" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="BenefitCenter" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="DataWarehouseCenter" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="ExpenseCenter" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="M05_Country">
+          <Key>
+            <PropertyRef Name="CountryID" />
+          </Key>
+          <Property Name="CountryID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CtryCodeAlpha3" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="CtryNumCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="CountryName" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+          <Property Name="SystemOnly" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="M05_District">
+          <Key>
+            <PropertyRef Name="DistrictID" />
+          </Key>
+          <Property Name="DistrictID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DistrictName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Active_Flag" Type="Boolean" />
+          <Property Name="SystemOnly" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="M05_Geography">
+          <Key>
+            <PropertyRef Name="GeographicKey" />
+          </Key>
+          <Property Name="GeographicKey" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CountryID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BranchID" Type="Int32" />
+          <Property Name="ZoneID" Type="Int32" />
+          <Property Name="MUID" Type="Int32" />
+          <Property Name="RouteID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DistrictID" Type="Int32" />
+          <Property Name="RSRId" Type="Int32" />
+          <Property Name="TypeRouteID" Type="Int32" />
+          <Property Name="Active_Flag" Type="Boolean" />
+          <Property Name="SystemOnly" Type="Boolean" />
+          <Property Name="CIPBINID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="M05_Market_Unit">
+          <Key>
+            <PropertyRef Name="MUID" />
+          </Key>
+          <Property Name="MUID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Market_Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Active_Flag" Type="Boolean" />
+          <Property Name="SystemOnly" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="M05_Route_Representative">
+          <Key>
+            <PropertyRef Name="RSRID" />
+          </Key>
+          <Property Name="RSRID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RSRName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Active_Flag" Type="Boolean" />
+          <Property Name="SystemOnly" Type="Boolean" />
+          <Property Name="RSRSourcecode" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="CountryID" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="M05_TypeRoute">
+          <Key>
+            <PropertyRef Name="TypeRouteID" />
+          </Key>
+          <Property Name="TypeRouteID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TypeRouteName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Active_Flag" Type="Boolean" />
+          <Property Name="SystemOnly" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="M05_Zone">
+          <Key>
+            <PropertyRef Name="ZoneID" />
+          </Key>
+          <Property Name="ZoneID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ZoneName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Active_Flag" Type="Boolean" />
+          <Property Name="SystemOnly" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="M01_ProductType">
+          <Key>
+            <PropertyRef Name="ProductTypeID" />
+          </Key>
+          <Property Name="ProductTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Active_Flag" Type="Boolean" />
+          <Property Name="SystemOnly" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="SalesDataMartContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="D01_PRODUCTS" EntityType="Self.D01_PRODUCTS" />
+          <EntitySet Name="D02_CUSTOMERS" EntityType="Self.D02_CUSTOMERS" />
+          <EntitySet Name="D05_GEOGRAPHY" EntityType="Self.D05_GEOGRAPHY" />
+          <EntitySet Name="M01_Brand" EntityType="Self.M01_Brand" />
+          <EntitySet Name="M01_Category" EntityType="Self.M01_Category" />
+          <EntitySet Name="M01_Flavor" EntityType="Self.M01_Flavor" />
+          <EntitySet Name="M01_POT_Status" EntityType="Self.M01_POT_Status" />
+          <EntitySet Name="M01_Presentation" EntityType="Self.M01_Presentation" />
+          <EntitySet Name="M01_ProductGroup" EntityType="Self.M01_ProductGroup" />
+          <EntitySet Name="M01_Products" EntityType="Self.M01_Products" />
+          <EntitySet Name="M01_Size" EntityType="Self.M01_Size" />
+          <EntitySet Name="M01_Source" EntityType="Self.M01_Source" />
+          <EntitySet Name="M01_SubBrand" EntityType="Self.M01_SubBrand" />
+          <EntitySet Name="M01_SubCategory" EntityType="Self.M01_SubCategory" />
+          <EntitySet Name="M01_TypeBrand" EntityType="Self.M01_TypeBrand" />
+          <EntitySet Name="M01_TypeOFSales" EntityType="Self.M01_TypeOFSales" />
+          <EntitySet Name="M02_Category" EntityType="Self.M02_Category" />
+          <EntitySet Name="M02_Chain" EntityType="Self.M02_Chain" />
+          <EntitySet Name="M02_Customers" EntityType="Self.M02_Customers" />
+          <EntitySet Name="M02_KeyAccount" EntityType="Self.M02_KeyAccount" />
+          <EntitySet Name="M02_PayMtMthod" EntityType="Self.M02_PayMtMthod" />
+          <EntitySet Name="M05_Branch" EntityType="Self.M05_Branch" />
+          <EntitySet Name="M05_Country" EntityType="Self.M05_Country" />
+          <EntitySet Name="M05_District" EntityType="Self.M05_District" />
+          <EntitySet Name="M05_Geography" EntityType="Self.M05_Geography" />
+          <EntitySet Name="M05_Market_Unit" EntityType="Self.M05_Market_Unit" />
+          <EntitySet Name="M05_Route_Representative" EntityType="Self.M05_Route_Representative" />
+          <EntitySet Name="M05_TypeRoute" EntityType="Self.M05_TypeRoute" />
+          <EntitySet Name="M05_Zone" EntityType="Self.M05_Zone" />
+          <EntitySet Name="M01_ProductType" EntityType="Self.M01_ProductType" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SalesDataMartModelStoreContainer" CdmEntityContainer="SalesDataMartContext">
+          <EntitySetMapping Name="D01_PRODUCTS">
+            <EntityTypeMapping TypeName="SalesDataMartModel.D01_PRODUCTS">
+              <MappingFragment StoreEntitySet="D01_PRODUCTS">
+                <ScalarProperty Name="UPC_Code" ColumnName="UPC_Code" />
+                <ScalarProperty Name="GNGName" ColumnName="GNGName" />
+                <ScalarProperty Name="GNGID" ColumnName="GNGID" />
+                <ScalarProperty Name="ProductKey" ColumnName="ProductKey" />
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="SAP_ProductCode" ColumnName="SAP_ProductCode" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="UnitsPerCase" ColumnName="UnitsPerCase" />
+                <ScalarProperty Name="PresentationID" ColumnName="PresentationID" />
+                <ScalarProperty Name="PresentationName" ColumnName="PresentationName" />
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+                <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+                <ScalarProperty Name="SourceID" ColumnName="SourceID" />
+                <ScalarProperty Name="SourceName" ColumnName="SourceName" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="SubCategoryID" ColumnName="SubCategoryID" />
+                <ScalarProperty Name="SubCategoryName" ColumnName="SubCategoryName" />
+                <ScalarProperty Name="BrandID" ColumnName="BrandID" />
+                <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+                <ScalarProperty Name="SubBrandID" ColumnName="SubBrandID" />
+                <ScalarProperty Name="SubBrandName" ColumnName="SubBrandName" />
+                <ScalarProperty Name="TypeBrandID" ColumnName="TypeBrandID" />
+                <ScalarProperty Name="TypeBrandName" ColumnName="TypeBrandName" />
+                <ScalarProperty Name="SizeID" ColumnName="SizeID" />
+                <ScalarProperty Name="SizeName" ColumnName="SizeName" />
+                <ScalarProperty Name="FlavorID" ColumnName="FlavorID" />
+                <ScalarProperty Name="FlavorName" ColumnName="FlavorName" />
+                <ScalarProperty Name="Active_Flag" ColumnName="Active_Flag" />
+                <ScalarProperty Name="SystemOnly" ColumnName="SystemOnly" />
+                <ScalarProperty Name="Flag_innovation" ColumnName="Flag_innovation" />
+                <ScalarProperty Name="StartDate_innovation" ColumnName="StartDate_innovation" />
+                <ScalarProperty Name="EndDate_innovation" ColumnName="EndDate_innovation" />
+                <ScalarProperty Name="PricePoint" ColumnName="PricePoint" />
+                <ScalarProperty Name="POT_StatusID" ColumnName="POT_StatusID" />
+                <ScalarProperty Name="UnitsForDistribution" ColumnName="UnitsForDistribution" />
+                <ScalarProperty Name="TypeSalesID" ColumnName="TypeSalesID" />
+                <ScalarProperty Name="TypeSalesName" ColumnName="TypeSalesName" />
+                <ScalarProperty Name="ProductTypeID" ColumnName="ProductTypeID" />
+                <ScalarProperty Name="ProductTypeName" ColumnName="ProductTypeName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="D02_CUSTOMERS">
+            <EntityTypeMapping TypeName="SalesDataMartModel.D02_CUSTOMERS">
+              <MappingFragment StoreEntitySet="D02_CUSTOMERS">
+                <ScalarProperty Name="SAP_LEGACYID" ColumnName="SAP_LEGACYID" />
+                <ScalarProperty Name="CustomerKey" ColumnName="CustomerKey" />
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="SAP_CustomerCode" ColumnName="SAP_CustomerCode" />
+                <ScalarProperty Name="Customer_Name" ColumnName="Customer_Name" />
+                <ScalarProperty Name="KeyAccountID" ColumnName="KeyAccountID" />
+                <ScalarProperty Name="KeyAccounName" ColumnName="KeyAccounName" />
+                <ScalarProperty Name="PayMtID" ColumnName="PayMtID" />
+                <ScalarProperty Name="PayMtMthodName" ColumnName="PayMtMthodName" />
+                <ScalarProperty Name="ChainID" ColumnName="ChainID" />
+                <ScalarProperty Name="ChainName" ColumnName="ChainName" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="WeeklyDROPSize" ColumnName="WeeklyDROPSize" />
+                <ScalarProperty Name="LastSalesDate" ColumnName="LastSalesDate" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="Flag_Active" ColumnName="Flag_Active" />
+                <ScalarProperty Name="SystemOnly" ColumnName="SystemOnly" />
+                <ScalarProperty Name="EventualKey_Client" ColumnName="EventualKey_Client" />
+                <ScalarProperty Name="Delivery_Area" ColumnName="Delivery_Area" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="D05_GEOGRAPHY">
+            <EntityTypeMapping TypeName="SalesDataMartModel.D05_GEOGRAPHY">
+              <MappingFragment StoreEntitySet="D05_GEOGRAPHY">
+                <ScalarProperty Name="CIPBINNAME" ColumnName="CIPBINNAME" />
+                <ScalarProperty Name="CIPBINID" ColumnName="CIPBINID" />
+                <ScalarProperty Name="GeographicKey" ColumnName="GeographicKey" />
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+                <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+                <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+                <ScalarProperty Name="BranchName" ColumnName="BranchName" />
+                <ScalarProperty Name="ZoneID" ColumnName="ZoneID" />
+                <ScalarProperty Name="ZoneName" ColumnName="ZoneName" />
+                <ScalarProperty Name="MUID" ColumnName="MUID" />
+                <ScalarProperty Name="Market_Unit" ColumnName="Market_Unit" />
+                <ScalarProperty Name="RouteID" ColumnName="RouteID" />
+                <ScalarProperty Name="DistrictID" ColumnName="DistrictID" />
+                <ScalarProperty Name="DistrictName" ColumnName="DistrictName" />
+                <ScalarProperty Name="RSRId" ColumnName="RSRId" />
+                <ScalarProperty Name="RSRName" ColumnName="RSRName" />
+                <ScalarProperty Name="TypeRouteID" ColumnName="TypeRouteID" />
+                <ScalarProperty Name="TypeRouteName" ColumnName="TypeRouteName" />
+                <ScalarProperty Name="Flag_Active" ColumnName="Flag_Active" />
+                <ScalarProperty Name="SystemOnly" ColumnName="SystemOnly" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M01_Brand">
+            <EntityTypeMapping TypeName="SalesDataMartModel.M01_Brand">
+              <MappingFragment StoreEntitySet="M01_Brand">
+                <ScalarProperty Name="BrandID" ColumnName="BrandID" />
+                <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+                <ScalarProperty Name="Active_Flag" ColumnName="Active_Flag" />
+                <ScalarProperty Name="SystemOnly" ColumnName="SystemOnly" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M01_Category">
+            <EntityTypeMapping TypeName="SalesDataMartModel.M01_Category">
+              <MappingFragment StoreEntitySet="M01_Category">
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="Active_Flag" ColumnName="Active_Flag" />
+                <ScalarProperty Name="SystemOnly" ColumnName="SystemOnly" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M01_Flavor">
+            <EntityTypeMapping TypeName="SalesDataMartModel.M01_Flavor">
+              <MappingFragment StoreEntitySet="M01_Flavor">
+                <ScalarProperty Name="FlavorID" ColumnName="FlavorID" />
+                <ScalarProperty Name="FlavorName" ColumnName="FlavorName" />
+                <ScalarProperty Name="Active_Flag" ColumnName="Active_Flag" />
+                <ScalarProperty Name="SystemOnly" ColumnName="SystemOnly" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M01_POT_Status">
+            <EntityTypeMapping TypeName="SalesDataMartModel.M01_POT_Status">
+              <MappingFragment StoreEntitySet="M01_POT_Status">
+                <ScalarProperty Name="POT_StatusID" ColumnName="POT_StatusID" />
+                <ScalarProperty Name="POT_StatusName" ColumnName="POT_StatusName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M01_Presentation">
+            <EntityTypeMapping TypeName="SalesDataMartModel.M01_Presentation">
+              <MappingFragment StoreEntitySet="M01_Presentation">
+                <ScalarProperty Name="PresentationID" ColumnName="PresentationID" />
+                <ScalarProperty Name="PresentationName" ColumnName="PresentationName" />
+                <ScalarProperty Name="Active_Flag" ColumnName="Active_Flag" />
+                <ScalarProperty Name="SystemOnly" ColumnName="SystemOnly" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M01_ProductGroup">
+            <EntityTypeMapping TypeName="SalesDataMartModel.M01_ProductGroup">
+              <MappingFragment StoreEntitySet="M01_ProductGroup">
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+                <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+                <ScalarProperty Name="Active_Flag" ColumnName="Active_Flag" />
+                <ScalarProperty Name="SystemOnly" ColumnName="SystemOnly" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M01_Products">
+            <EntityTypeMapping TypeName="SalesDataMartModel.M01_Products">
+              <MappingFragment StoreEntitySet="M01_Products">
+                <ScalarProperty Name="UPC_Code" ColumnName="UPC_Code" />
+                <ScalarProperty Name="GNGId" ColumnName="GNGId" />
+                <ScalarProperty Name="ProductKey" ColumnName="ProductKey" />
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="SAP_ProductCode" ColumnName="SAP_ProductCode" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Grams" ColumnName="Grams" />
+                <ScalarProperty Name="Standar_Cost" ColumnName="Standar_Cost" />
+                <ScalarProperty Name="PricePoint" ColumnName="PricePoint" />
+                <ScalarProperty Name="UnitsPerCase" ColumnName="UnitsPerCase" />
+                <ScalarProperty Name="PresentationID" ColumnName="PresentationID" />
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+                <ScalarProperty Name="SourceID" ColumnName="SourceID" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="SubCategoryID" ColumnName="SubCategoryID" />
+                <ScalarProperty Name="BrandID" ColumnName="BrandID" />
+                <ScalarProperty Name="SubBrandID" ColumnName="SubBrandID" />
+                <ScalarProperty Name="TypeBrandID" ColumnName="TypeBrandID" />
+                <ScalarProperty Name="SizeID" ColumnName="SizeID" />
+                <ScalarProperty Name="FlavorID" ColumnName="FlavorID" />
+                <ScalarProperty Name="Active_Flag" ColumnName="Active_Flag" />
+                <ScalarProperty Name="SystemOnly" ColumnName="SystemOnly" />
+                <ScalarProperty Name="Flag_innovation" ColumnName="Flag_innovation" />
+                <ScalarProperty Name="StartDate_innovation" ColumnName="StartDate_innovation" />
+                <ScalarProperty Name="EndDate_innovation" ColumnName="EndDate_innovation" />
+                <ScalarProperty Name="POT_StatusID" ColumnName="POT_StatusID" />
+                <ScalarProperty Name="UnitsForDistribution" ColumnName="UnitsForDistribution" />
+                <ScalarProperty Name="TypeSalesID" ColumnName="TypeSalesID" />
+                <ScalarProperty Name="ProductTypeID" ColumnName="ProductTypeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M01_Size">
+            <EntityTypeMapping TypeName="SalesDataMartModel.M01_Size">
+              <MappingFragment StoreEntitySet="M01_Size">
+                <ScalarProperty Name="SizeID" ColumnName="SizeID" />
+                <ScalarProperty Name="SizeName" ColumnName="SizeName" />
+                <ScalarProperty Name="Active_Flag" ColumnName="Active_Flag" />
+                <ScalarProperty Name="SystemOnly" ColumnName="SystemOnly" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M01_Source">
+            <EntityTypeMapping TypeName="SalesDataMartModel.M01_Source">
+              <MappingFragment StoreEntitySet="M01_Source">
+                <ScalarProperty Name="SourceID" ColumnName="SourceID" />
+                <ScalarProperty Name="SourceName" ColumnName="SourceName" />
+                <ScalarProperty Name="Active_Flag" ColumnName="Active_Flag" />
+                <ScalarProperty Name="SystemOnly" ColumnName="SystemOnly" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M01_SubBrand">
+            <EntityTypeMapping TypeName="SalesDataMartModel.M01_SubBrand">
+              <MappingFragment StoreEntitySet="M01_SubBrand">
+                <ScalarProperty Name="SubBrandID" ColumnName="SubBrandID" />
+                <ScalarProperty Name="SubBrandName" ColumnName="SubBrandName" />
+                <ScalarProperty Name="Active_Flag" ColumnName="Active_Flag" />
+                <ScalarProperty Name="SystemOnly" ColumnName="SystemOnly" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M01_SubCategory">
+            <EntityTypeMapping TypeName="SalesDataMartModel.M01_SubCategory">
+              <MappingFragment StoreEntitySet="M01_SubCategory">
+                <ScalarProperty Name="SubCategoryID" ColumnName="SubCategoryID" />
+                <ScalarProperty Name="SubCategoryName" ColumnName="SubCategoryName" />
+                <ScalarProperty Name="Active_Flag" ColumnName="Active_Flag" />
+                <ScalarProperty Name="SystemOnly" ColumnName="SystemOnly" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M01_TypeBrand">
+            <EntityTypeMapping TypeName="SalesDataMartModel.M01_TypeBrand">
+              <MappingFragment StoreEntitySet="M01_TypeBrand">
+                <ScalarProperty Name="TypeBrandID" ColumnName="TypeBrandID" />
+                <ScalarProperty Name="TypeBrandName" ColumnName="TypeBrandName" />
+                <ScalarProperty Name="Active_Flag" ColumnName="Active_Flag" />
+                <ScalarProperty Name="SystemOnly" ColumnName="SystemOnly" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M01_TypeOFSales">
+            <EntityTypeMapping TypeName="SalesDataMartModel.M01_TypeOFSales">
+              <MappingFragment StoreEntitySet="M01_TypeOFSales">
+                <ScalarProperty Name="TypeSalesID" ColumnName="TypeSalesID" />
+                <ScalarProperty Name="TypeSalesName" ColumnName="TypeSalesName" />
+                <ScalarProperty Name="Active_Flag" ColumnName="Active_Flag" />
+                <ScalarProperty Name="SystemOnly" ColumnName="SystemOnly" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M02_Category">
+            <EntityTypeMapping TypeName="SalesDataMartModel.M02_Category">
+              <MappingFragment StoreEntitySet="M02_Category">
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="Active_Flag" ColumnName="Active_Flag" />
+                <ScalarProperty Name="SystemOnly" ColumnName="SystemOnly" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M02_Chain">
+            <EntityTypeMapping TypeName="SalesDataMartModel.M02_Chain">
+              <MappingFragment StoreEntitySet="M02_Chain">
+                <ScalarProperty Name="ChainID" ColumnName="ChainID" />
+                <ScalarProperty Name="ChainName" ColumnName="ChainName" />
+                <ScalarProperty Name="Active_Flag" ColumnName="Active_Flag" />
+                <ScalarProperty Name="SystemOnly" ColumnName="SystemOnly" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M02_Customers">
+            <EntityTypeMapping TypeName="SalesDataMartModel.M02_Customers">
+              <MappingFragment StoreEntitySet="M02_Customers">
+                <ScalarProperty Name="SAP_LEGACYID" ColumnName="SAP_LEGACYID" />
+                <ScalarProperty Name="CustomerKey" ColumnName="CustomerKey" />
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="SAP_CustomerCode" ColumnName="SAP_CustomerCode" />
+                <ScalarProperty Name="Customer_Name" ColumnName="Customer_Name" />
+                <ScalarProperty Name="KeyAccountID" ColumnName="KeyAccountID" />
+                <ScalarProperty Name="PayMtID" ColumnName="PayMtID" />
+                <ScalarProperty Name="ChainID" ColumnName="ChainID" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="WeeklyDROPSize" ColumnName="WeeklyDROPSize" />
+                <ScalarProperty Name="LastSalesDate" ColumnName="LastSalesDate" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="Flag_Active" ColumnName="Flag_Active" />
+                <ScalarProperty Name="SystemOnly" ColumnName="SystemOnly" />
+                <ScalarProperty Name="EventualKey_Client" ColumnName="EventualKey_Client" />
+                <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+                <ScalarProperty Name="Delivery_Area" ColumnName="Delivery_Area" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M02_KeyAccount">
+            <EntityTypeMapping TypeName="SalesDataMartModel.M02_KeyAccount">
+              <MappingFragment StoreEntitySet="M02_KeyAccount">
+                <ScalarProperty Name="KeyAccountID" ColumnName="KeyAccountID" />
+                <ScalarProperty Name="KeyAccounName" ColumnName="KeyAccounName" />
+                <ScalarProperty Name="Active_Flag" ColumnName="Active_Flag" />
+                <ScalarProperty Name="SystemOnly" ColumnName="SystemOnly" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M02_PayMtMthod">
+            <EntityTypeMapping TypeName="SalesDataMartModel.M02_PayMtMthod">
+              <MappingFragment StoreEntitySet="M02_PayMtMthod">
+                <ScalarProperty Name="PayMtID" ColumnName="PayMtID" />
+                <ScalarProperty Name="PayMtMthodName" ColumnName="PayMtMthodName" />
+                <ScalarProperty Name="Active_Flag" ColumnName="Active_Flag" />
+                <ScalarProperty Name="SystemOnly" ColumnName="SystemOnly" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M05_Branch">
+            <EntityTypeMapping TypeName="SalesDataMartModel.M05_Branch">
+              <MappingFragment StoreEntitySet="M05_Branch">
+                <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+                <ScalarProperty Name="BranchName" ColumnName="BranchName" />
+                <ScalarProperty Name="Active_Flag" ColumnName="Active_Flag" />
+                <ScalarProperty Name="SystemOnly" ColumnName="SystemOnly" />
+                <ScalarProperty Name="CostCenter" ColumnName="CostCenter" />
+                <ScalarProperty Name="BenefitCenter" ColumnName="BenefitCenter" />
+                <ScalarProperty Name="DataWarehouseCenter" ColumnName="DataWarehouseCenter" />
+                <ScalarProperty Name="ExpenseCenter" ColumnName="ExpenseCenter" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M05_Country">
+            <EntityTypeMapping TypeName="SalesDataMartModel.M05_Country">
+              <MappingFragment StoreEntitySet="M05_Country">
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+                <ScalarProperty Name="CtryCodeAlpha3" ColumnName="CtryCodeAlpha3" />
+                <ScalarProperty Name="CtryNumCode" ColumnName="CtryNumCode" />
+                <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+                <ScalarProperty Name="SystemOnly" ColumnName="SystemOnly" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M05_District">
+            <EntityTypeMapping TypeName="SalesDataMartModel.M05_District">
+              <MappingFragment StoreEntitySet="M05_District">
+                <ScalarProperty Name="DistrictID" ColumnName="DistrictID" />
+                <ScalarProperty Name="DistrictName" ColumnName="DistrictName" />
+                <ScalarProperty Name="Active_Flag" ColumnName="Active_Flag" />
+                <ScalarProperty Name="SystemOnly" ColumnName="SystemOnly" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M05_Geography">
+            <EntityTypeMapping TypeName="SalesDataMartModel.M05_Geography">
+              <MappingFragment StoreEntitySet="M05_Geography">
+                <ScalarProperty Name="CIPBINID" ColumnName="CIPBINID" />
+                <ScalarProperty Name="GeographicKey" ColumnName="GeographicKey" />
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+                <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+                <ScalarProperty Name="ZoneID" ColumnName="ZoneID" />
+                <ScalarProperty Name="MUID" ColumnName="MUID" />
+                <ScalarProperty Name="RouteID" ColumnName="RouteID" />
+                <ScalarProperty Name="DistrictID" ColumnName="DistrictID" />
+                <ScalarProperty Name="RSRId" ColumnName="RSRId" />
+                <ScalarProperty Name="TypeRouteID" ColumnName="TypeRouteID" />
+                <ScalarProperty Name="Active_Flag" ColumnName="Active_Flag" />
+                <ScalarProperty Name="SystemOnly" ColumnName="SystemOnly" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M05_Market_Unit">
+            <EntityTypeMapping TypeName="SalesDataMartModel.M05_Market_Unit">
+              <MappingFragment StoreEntitySet="M05_Market_Unit">
+                <ScalarProperty Name="MUID" ColumnName="MUID" />
+                <ScalarProperty Name="Market_Unit" ColumnName="Market_Unit" />
+                <ScalarProperty Name="Active_Flag" ColumnName="Active_Flag" />
+                <ScalarProperty Name="SystemOnly" ColumnName="SystemOnly" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M05_Route_Representative">
+            <EntityTypeMapping TypeName="SalesDataMartModel.M05_Route_Representative">
+              <MappingFragment StoreEntitySet="M05_Route_Representative">
+                <ScalarProperty Name="RSRID" ColumnName="RSRID" />
+                <ScalarProperty Name="RSRName" ColumnName="RSRName" />
+                <ScalarProperty Name="Active_Flag" ColumnName="Active_Flag" />
+                <ScalarProperty Name="SystemOnly" ColumnName="SystemOnly" />
+                <ScalarProperty Name="RSRSourcecode" ColumnName="RSRSourcecode" />
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M05_TypeRoute">
+            <EntityTypeMapping TypeName="SalesDataMartModel.M05_TypeRoute">
+              <MappingFragment StoreEntitySet="M05_TypeRoute">
+                <ScalarProperty Name="TypeRouteID" ColumnName="TypeRouteID" />
+                <ScalarProperty Name="TypeRouteName" ColumnName="TypeRouteName" />
+                <ScalarProperty Name="Active_Flag" ColumnName="Active_Flag" />
+                <ScalarProperty Name="SystemOnly" ColumnName="SystemOnly" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M05_Zone">
+            <EntityTypeMapping TypeName="SalesDataMartModel.M05_Zone">
+              <MappingFragment StoreEntitySet="M05_Zone">
+                <ScalarProperty Name="ZoneID" ColumnName="ZoneID" />
+                <ScalarProperty Name="ZoneName" ColumnName="ZoneName" />
+                <ScalarProperty Name="Active_Flag" ColumnName="Active_Flag" />
+                <ScalarProperty Name="SystemOnly" ColumnName="SystemOnly" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M01_ProductType">
+            <EntityTypeMapping TypeName="SalesDataMartModel.M01_ProductType">
+              <MappingFragment StoreEntitySet="M01_ProductType">
+                <ScalarProperty Name="ProductTypeID" ColumnName="ProductTypeID" />
+                <ScalarProperty Name="ProductTypeName" ColumnName="ProductTypeName" />
+                <ScalarProperty Name="Active_Flag" ColumnName="Active_Flag" />
+                <ScalarProperty Name="SystemOnly" ColumnName="SystemOnly" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

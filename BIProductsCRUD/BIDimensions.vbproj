@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1D1BAC4C-5687-44D8-A34F-5AE1AF2C2731}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <AssemblyName>BI.Dimensions.CRUD</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>BI.Dimensions.CRUD.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>BI.Dimensions.CRUD.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="EntityFramework.SqlServer" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Customers\CustomerDirtyRecord.vb" />
+    <Compile Include="Geography\GeographyDirtyRecord.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Model\AUX_SYSTEM.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BIDimensions.Context.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BIDimensions.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BIDimensions.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BIDimensions.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BIDimensions.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\D01_PRODUCTS.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\D02_CUSTOMERS.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\D05_GEOGRAPHY.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Products\ProductDirtyRecord.vb" />
+    <Compile Include="Model\HOM_Branch.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_Brand.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_Chain.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_Country.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_CustomerCategory.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_District.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_Flavor.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_keyAccount.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_PayMethod.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_Presentation.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_ProductGroup.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_RSR.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_Size.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_Source.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_SubBrand.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_SubCategory.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_TypeBrand.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_TypeRoute.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\M01_Brand.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\M01_Category.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\M01_Flavor.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\M01_POT_Status.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\M01_Presentation.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\M01_ProductGroup.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\M01_Products.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\M01_Size.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\M01_Source.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\M01_SubBrand.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\M01_SubCategory.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\M01_TypeBrand.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\M01_TypeOFSales.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\M02_Category.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\M02_Chain.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\M02_Customers.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\M02_Customers_bkp.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\M02_KeyAccount.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\M02_PayMtMthod.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\M05_Branch.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\M05_Country.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\M05_District.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\M05_Geography.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\M05_Geography_Prueba.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\M05_Market_Unit.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\M05_Route_Representative.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\M05_TypeRoute.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\M05_Zone.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sysdiagrams.vb">
+      <DependentUpon>BIDimensions.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <EntityDeploy Include="Model\BIDimensions.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BIDimensions.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <None Include="packages.config" />
+    <None Include="Model\BIDimensions.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BIDimensions.edmx</DependentUpon>
+      <LastGenOutput>BIDimensions.Context.vb</LastGenOutput>
+    </None>
+    <None Include="Model\BIDimensions.edmx.diagram">
+      <DependentUpon>BIDimensions.edmx</DependentUpon>
+    </None>
+    <None Include="Model\BIDimensions.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BIDimensions.edmx</DependentUpon>
+      <LastGenOutput>BIDimensions.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

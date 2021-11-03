@@ -1,0 +1,29 @@
+GetTable variaciones
+Me.cboCategoryID.SelectedValue = _producto. nombre de campo
+
+You can view changes tracked by a DataContext by using GetChangeSet.
+
+Dim singleRow = singleRowTable.AsEnumerable().Single()
+
+GramsText
+
+
+
+        Select Case _MeasureCalled
+            Case ProductsMeasuresIndex.Brands
+            Case ProductsMeasuresIndex.Categories
+ 
+            Case ProductsMeasuresIndex.Flavors
+
+            Case ProductsMeasuresIndex.POT_Status
+ 
+            Case ProductsMeasuresIndex.Presentations
+           Case ProductsMeasuresIndex.ProductGroups
+            Case ProductsMeasuresIndex.Sizes
+           Case ProductsMeasuresIndex.Sources
+            Case ProductsMeasuresIndex.SubBrands
+            Case ProductsMeasuresIndex.SubCategories
+               
+            Case ProductsMeasuresIndex.TypeOfBrands
+           Case ProductsMeasuresIndex.TypeOfSales
+       End Select

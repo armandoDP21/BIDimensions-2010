@@ -1,0 +1,25 @@
+                'Dim RecordsList = New BindingSource
+                'RecordsList.DataSource = context.M01_Brand.Local.ToBindingList()
+                ''RecordsList.AllowEdit = False
+                'Me.GridDatos.DataSource = RecordsList 
+
+
+'Dim _Record = context.M01_Brand.ToList
+
+
+                'Dim RecordsList = New BindingList(Of M01_Brand)
+                'RecordsList.AllowEdit = True
+                'Me.GridDatos.DataSource = RecordsList
+
+
+                'var p = _context.PersonSet.ToList();
+                'persons = new BindingList<Person>(p); //getting bindinglist
+                'persons.AllowEdit = true;
+                ''persons.AllowNew = true;
+
+                'pSource.DataSource = persons;
+                'pSource.AllowNew = true;
+
+                'personDataGridView.DataSource = pSource;
+
+                'Me.GridDatos.DataSource = RecordsList.Local

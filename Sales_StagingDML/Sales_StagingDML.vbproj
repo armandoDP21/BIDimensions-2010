@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E2507DD0-98EA-4A16-B7C6-68CC7E7DA7E9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <AssemblyName>Sales_Staging.Model</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Sales_Staging.Model.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Sales_Staging.Model.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\AUX_SYSTEM.vb">
+      <DependentUpon>Sales_Staging.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_Branch.vb">
+      <DependentUpon>Sales_Staging.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_Brand.vb">
+      <DependentUpon>Sales_Staging.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_Category.vb">
+      <DependentUpon>Sales_Staging.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_Chain.vb">
+      <DependentUpon>Sales_Staging.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_Channel.vb">
+      <DependentUpon>Sales_Staging.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_Country.vb">
+      <DependentUpon>Sales_Staging.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_Customer.vb">
+      <DependentUpon>Sales_Staging.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_CustomerCategory.vb">
+      <DependentUpon>Sales_Staging.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_District.vb">
+      <DependentUpon>Sales_Staging.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_Flavor.vb">
+      <DependentUpon>Sales_Staging.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_keyAccount.vb">
+      <DependentUpon>Sales_Staging.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_PayMethod.vb">
+      <DependentUpon>Sales_Staging.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_Presentation.vb">
+      <DependentUpon>Sales_Staging.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_ProdCategory.vb">
+      <DependentUpon>Sales_Staging.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_ProductGroup.vb">
+      <DependentUpon>Sales_Staging.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_Products.vb">
+      <DependentUpon>Sales_Staging.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_Reason.vb">
+      <DependentUpon>Sales_Staging.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_Size.vb">
+      <DependentUpon>Sales_Staging.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_Source.vb">
+      <DependentUpon>Sales_Staging.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_SubBrand.vb">
+      <DependentUpon>Sales_Staging.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_SubCategory.vb">
+      <DependentUpon>Sales_Staging.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_TypeBrand.vb">
+      <DependentUpon>Sales_Staging.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_TypeRoute.vb">
+      <DependentUpon>Sales_Staging.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOM_TypeSales.vb">
+      <DependentUpon>Sales_Staging.tt</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Model\Sales_Staging.Context.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sales_Staging.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Sales_Staging.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sales_Staging.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Sales_Staging.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sales_Staging.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <EntityDeploy Include="Model\Sales_Staging.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Sales_Staging.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <None Include="packages.config" />
+    <None Include="Model\Sales_Staging.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Sales_Staging.edmx</DependentUpon>
+      <LastGenOutput>Sales_Staging.Context.vb</LastGenOutput>
+    </None>
+    <None Include="Model\Sales_Staging.edmx.diagram">
+      <DependentUpon>Sales_Staging.edmx</DependentUpon>
+    </None>
+    <None Include="Model\Sales_Staging.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Sales_Staging.edmx</DependentUpon>
+      <LastGenOutput>Sales_Staging.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Common", "Common\Common.vbproj", "{CDAE2BE0-28E6-4E9E-8527-28E30E3F371F}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DataAccess", "DataAccess\DataAccess.vbproj", "{1D210BE2-E0E7-4A25-AC7F-6013DD57D081}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DimensionsConfiguration", "DimensionsConfiguration\DimensionsConfiguration.vbproj", "{8B8160B9-B3D9-4A0C-A634-BCB01E63E9CB}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "BIDimensions", "BIProductsCRUD\BIDimensions.vbproj", "{1D1BAC4C-5687-44D8-A34F-5AE1AF2C2731}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{76046F29-3D9F-47B8-A1BF-3A2BC1F799BB}"
+	ProjectSection(SolutionItems) = preProject
+		Pendientes.txt = Pendientes.txt
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SalesDataMartDML", "SalesDataMartDML\SalesDataMartDML.vbproj", "{2D8EC1D5-503B-4B31-BCFF-0AFC9FC35B4F}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Sales_StagingDML", "Sales_StagingDML\Sales_StagingDML.vbproj", "{E2507DD0-98EA-4A16-B7C6-68CC7E7DA7E9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDAE2BE0-28E6-4E9E-8527-28E30E3F371F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDAE2BE0-28E6-4E9E-8527-28E30E3F371F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDAE2BE0-28E6-4E9E-8527-28E30E3F371F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDAE2BE0-28E6-4E9E-8527-28E30E3F371F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D210BE2-E0E7-4A25-AC7F-6013DD57D081}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D210BE2-E0E7-4A25-AC7F-6013DD57D081}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D210BE2-E0E7-4A25-AC7F-6013DD57D081}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D210BE2-E0E7-4A25-AC7F-6013DD57D081}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B8160B9-B3D9-4A0C-A634-BCB01E63E9CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B8160B9-B3D9-4A0C-A634-BCB01E63E9CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B8160B9-B3D9-4A0C-A634-BCB01E63E9CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B8160B9-B3D9-4A0C-A634-BCB01E63E9CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D1BAC4C-5687-44D8-A34F-5AE1AF2C2731}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D1BAC4C-5687-44D8-A34F-5AE1AF2C2731}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D1BAC4C-5687-44D8-A34F-5AE1AF2C2731}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D1BAC4C-5687-44D8-A34F-5AE1AF2C2731}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D8EC1D5-503B-4B31-BCFF-0AFC9FC35B4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D8EC1D5-503B-4B31-BCFF-0AFC9FC35B4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D8EC1D5-503B-4B31-BCFF-0AFC9FC35B4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D8EC1D5-503B-4B31-BCFF-0AFC9FC35B4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2507DD0-98EA-4A16-B7C6-68CC7E7DA7E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2507DD0-98EA-4A16-B7C6-68CC7E7DA7E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2507DD0-98EA-4A16-B7C6-68CC7E7DA7E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2507DD0-98EA-4A16-B7C6-68CC7E7DA7E9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

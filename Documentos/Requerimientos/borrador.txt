@@ -1,0 +1,12 @@
+Con el desarrollo del proyecto BI se debe incorporar una herramienta para el mantenimiento de las catalogos maestros.
+
+En este documento se definen los requerimientos para la creacion de esta herramienta que permite a los usuarios registrar cambios de los datos en las matrices y modificar/agregar los datos de las dimensiones.
+
+
+
+
+Actualmente el proceso para la administración de los clientes de cartera centralizada (cadenas grandes cuya administración es centralizada en un solo sitio)  es realizado desde 2 sistemas , una parte es hecha desde las sucursales utilizando DC1 en donde facturan y registran cualquier nota de crédito o debito asociada al cliente .  Dicha documentación hoy sube a SAP a traves de una interfase originada desde DC1 .  La segunda parte del proceso es complementada desde SAP donde se capturan los pagos y se registra cualquier otro tipo de documento que afecte el saldo del cliente , dicho esto se estable el saldo del cliente en SAP .
+
+Sin embargo en el sistema de DC1 que es donde se factura , el saldo del cliente no esta actualizado por la ausencia de los movimientos que generan el crédito (pagos o Notas de crédito) , por lo que el limite de crédito del cliente debe elevarse por rangos fuera de la realidad para que el sistema DC1 permita poder facturarles , este tema conlleva a una falta de integridad de informacion y un riesgo potencial de poder facturarle mas a un cliente de lo autorizado.
+
+Para ello este documento define el requerimiento de la creación de la interfase que exporte transacciones de clientes centralizados capturadas en SAP para luego ser transferidas a DC1 , de esta manera se pretende  mantener el saldo de la cuenta corriente de los clientes centralizados en el sistema legado DC1.

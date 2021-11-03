@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Financial_Interfaces" Class="MeasuresTestDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=pepwap11835;Initial Catalog=Financial_Interfaces;Integrated Security=True" SettingsObjectName="My.MySettings" SettingsPropertyName="Financial_InterfacesConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.M01_Brand" Member="M01_Brands">
+    <Type Name="M01_Brand">
+      <Column Name="BrandID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BrandName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Active_Flag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SystemOnly" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.M01_Category" Member="M01_Categories">
+    <Type Name="M01_Category">
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Active_Flag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SystemOnly" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.M01_Flavor" Member="M01_Flavors">
+    <Type Name="M01_Flavor">
+      <Column Name="FlavorID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FlavorName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Active_Flag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SystemOnly" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.M01_POT_Status" Member="M01_POT_Status">
+    <Type Name="M01_POT_Status">
+      <Column Name="POT_StatusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="POT_StatusName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.M01_Presentation" Member="M01_Presentations">
+    <Type Name="M01_Presentation">
+      <Column Name="PresentationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PresentationName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Active_Flag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SystemOnly" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.M01_ProductGroup" Member="M01_ProductGroups">
+    <Type Name="M01_ProductGroup">
+      <Column Name="GroupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GroupName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Active_Flag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SystemOnly" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.M01_Size" Member="M01_Sizes">
+    <Type Name="M01_Size">
+      <Column Name="SizeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SizeName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Active_Flag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SystemOnly" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.M01_Source" Member="M01_Sources">
+    <Type Name="M01_Source">
+      <Column Name="SourceID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SourceName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Active_Flag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SystemOnly" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.M01_SubBrand" Member="M01_SubBrands">
+    <Type Name="M01_SubBrand">
+      <Column Name="SubBrandID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SubBrandName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Active_Flag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SystemOnly" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.M01_SubCategory" Member="M01_SubCategories">
+    <Type Name="M01_SubCategory">
+      <Column Name="SubCategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SubCategoryName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Active_Flag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SystemOnly" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.M01_TypeBrand" Member="M01_TypeBrands">
+    <Type Name="M01_TypeBrand">
+      <Column Name="TypeBrandID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TypeBrandName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Active_Flag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SystemOnly" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.M01_TypeOFSales" Member="M01_TypeOFSales">
+    <Type Name="M01_TypeOFSale">
+      <Column Name="TypeSalesID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TypeSalesName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Active_Flag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SystemOnly" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

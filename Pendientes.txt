@@ -1,0 +1,14 @@
+1. PRODUCTS
+	A. Test update Product
+	B. Event record updated
+	C- Colorizar los no relacionados
+	D. Separar querys de M01 y D01
+
+2. CUSTOMERS
+3. GEOGRAPHY
+
+
+<connectionStrings>
+    <add name="MainDb" connectionString="Data Source=|DataDirectory|\Db.sdf" providerName="System.Data.SqlServerCe.4.0" />
+    <add name="AnotherDb" connectionString="Data Source=|DataDirectory|\AnotherDb.sdf" providerName="System.Data.SqlServerCe.4.0" />
+  </connectionStrings>

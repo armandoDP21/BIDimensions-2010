@@ -1,0 +1,951 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Sales_StagingModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AUX_SYSTEM">
+          <Key>
+            <PropertyRef Name="SystemId" />
+          </Key>
+          <Property Name="SystemId" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="SystemName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Version" Type="nvarchar" MaxLength="20" />
+          <Property Name="systemPrefix" Type="char" MaxLength="2" />
+          <Property Name="CompanyEntity_Code" Type="nvarchar" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="HOM_Branch">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="BranchSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="BranchSourceCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="BranchSourceName" Type="nvarchar" MaxLength="50" />
+          <Property Name="BranchID" Type="int" />
+          <Property Name="ZoneID" Type="int" />
+          <Property Name="MarketUnitID" Type="int" />
+        </EntityType>
+        <EntityType Name="HOM_Brand">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="BrandSourceCode" />
+            <PropertyRef Name="UnionSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="BrandSourceCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="BrandSourceName" Type="nvarchar" MaxLength="50" />
+          <Property Name="BrandID" Type="int" />
+          <Property Name="CategoryID" Type="int" />
+          <Property Name="UnionSourceCode" Type="nvarchar" MaxLength="12" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HOM_Category">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="CategorySourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="CategorySourceCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="CategorySourceName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CategoryID" Type="int" />
+        </EntityType>
+        <EntityType Name="HOM_Chain">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="BranchSourceCode" />
+            <PropertyRef Name="ChainSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="BranchSourceCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="ChainSourceCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="ChainSourceName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChainID" Type="int" />
+        </EntityType>
+        <EntityType Name="HOM_Channel">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="ChannelSourceCode" />
+            <PropertyRef Name="BranchSouceCode" />
+          </Key>
+          <Property Name="SystemID" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="ChannelSourceCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="BranchSouceCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="ChannelSourceName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChannelID" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Sales_Staging.dbo.HOM_Country' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="HOM_Country">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="CountrySourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="CountrySourceCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="CustomerCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="CountrySourceName" Type="nvarchar" MaxLength="100" />
+          <Property Name="CountryId" Type="nvarchar" MaxLength="2" />
+          <Property Name="BranchId" Type="int" />
+        </EntityType>
+        <EntityType Name="HOM_Customer">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="BranchSourceCode" />
+            <PropertyRef Name="CustomerSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="BranchSourceCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="CustomerSourceCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="CustomerSourceName" Type="nvarchar" MaxLength="100" />
+          <Property Name="CustomerID" Type="int" />
+          <Property Name="KeyAccountID" Type="int" />
+          <Property Name="CustomerKey_SystemOnly" Type="int" />
+        </EntityType>
+        <EntityType Name="HOM_CustomerCategory">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="CategorySourceCode" />
+            <PropertyRef Name="BranchSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="CategorySourceCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="BranchSourceCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="CategorySourceName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CategoryID" Type="int" />
+        </EntityType>
+        <EntityType Name="HOM_District">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="BranchSourceCode" />
+            <PropertyRef Name="DistrictSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="BranchSourceCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="DistrictSourceCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="DistrictSourceName" Type="nvarchar" MaxLength="50" />
+          <Property Name="DistrictID" Type="int" />
+        </EntityType>
+        <EntityType Name="HOM_Flavor">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="FlavorSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="FlavorSourceCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="FlavorSourceName" Type="nvarchar" MaxLength="50" />
+          <Property Name="FlavorID" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Sales_Staging.dbo.HOM_keyAccount' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="HOM_keyAccount">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="KeyAccountSourceCode" />
+            <PropertyRef Name="KeyAccountID" />
+          </Key>
+          <Property Name="SystemID" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="KeyAccountSourceCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="KeyAccountSourceName" Type="nvarchar" MaxLength="50" />
+          <Property Name="KeyAccountID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HOM_PayMethod">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="PayMethodSourceCode" />
+            <PropertyRef Name="BranchSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="PayMethodSourceCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="PayMethodSourceName" Type="nvarchar" MaxLength="50" />
+          <Property Name="PayMtID" Type="int" />
+          <Property Name="BranchSourceCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HOM_Presentation">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="PresentSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="PresentSourceCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="PresentSourceName" Type="nvarchar" MaxLength="100" />
+          <Property Name="PresentationID" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Sales_Staging.dbo.HOM_ProdCategory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="HOM_ProdCategory">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="CategorySourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="CategorySourceCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="CategorySourceName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CategoryID" Type="int" />
+        </EntityType>
+        <EntityType Name="HOM_ProductGroup">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="PGroupSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="PGroupSourceCode" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="PGroupSourceName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProductGroupID" Type="int" />
+        </EntityType>
+        <EntityType Name="HOM_Products">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="ProductSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="ProductSourceCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="ProductSourceName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProductID" Type="int" />
+          <Property Name="ProductKey_SystemOnly" Type="int" />
+        </EntityType>
+        <EntityType Name="HOM_Reason">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="ReasonSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="ReasonSourceCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="ReasonSourceName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReasonID" Type="int" />
+        </EntityType>
+        <EntityType Name="HOM_Size">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="SizeSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="SizeSourceCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="SizeSourceName" Type="nvarchar" MaxLength="50" />
+          <Property Name="SizeID" Type="int" />
+        </EntityType>
+        <EntityType Name="HOM_Source">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="SourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="SourceCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="SourceName" Type="nvarchar" MaxLength="50" />
+          <Property Name="SourceID" Type="int" />
+        </EntityType>
+        <EntityType Name="HOM_SubBrand">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="SubBrandSourceCode" />
+            <PropertyRef Name="UnionSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="SubBrandSourceCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="SubBrandSourceName" Type="nvarchar" MaxLength="50" />
+          <Property Name="SubBrandID" Type="int" />
+          <Property Name="UnionSourceCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HOM_SubCategory">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="SubCategorySourceCode" />
+            <PropertyRef Name="UnionSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="SubCategorySourceCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="SubCategorySourceName" Type="nvarchar" MaxLength="50" />
+          <Property Name="SubCategoryID" Type="int" />
+          <Property Name="UnionSourceCode" Type="nvarchar" MaxLength="12" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HOM_TypeBrand">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="TypeBrandSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="TypeBrandSourceCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="TypeBrandSourceName" Type="nvarchar" MaxLength="50" />
+          <Property Name="TypeBrandID" Type="int" />
+        </EntityType>
+        <EntityType Name="HOM_TypeRoute">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="TypeRouteSourceCode" />
+            <PropertyRef Name="BranchSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="TypeRouteSourceCode" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="TypeRouteSourceName" Type="varchar" MaxLength="50" />
+          <Property Name="TypeRouteID" Type="int" />
+          <Property Name="BranchSourceCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HOM_TypeSales">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="TypeSalesSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="TypeSalesSourceCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="TypeSalesSourceName" Type="nvarchar" MaxLength="50" />
+          <Property Name="TypeSalesID" Type="int" />
+        </EntityType>
+        <EntityContainer Name="Sales_StagingModelStoreContainer">
+          <EntitySet Name="AUX_SYSTEM" EntityType="Self.AUX_SYSTEM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HOM_Branch" EntityType="Self.HOM_Branch" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HOM_Brand" EntityType="Self.HOM_Brand" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HOM_Category" EntityType="Self.HOM_Category" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HOM_Chain" EntityType="Self.HOM_Chain" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HOM_Channel" EntityType="Self.HOM_Channel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HOM_Customer" EntityType="Self.HOM_Customer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HOM_CustomerCategory" EntityType="Self.HOM_CustomerCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HOM_District" EntityType="Self.HOM_District" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HOM_Flavor" EntityType="Self.HOM_Flavor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HOM_PayMethod" EntityType="Self.HOM_PayMethod" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HOM_Presentation" EntityType="Self.HOM_Presentation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HOM_ProductGroup" EntityType="Self.HOM_ProductGroup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HOM_Products" EntityType="Self.HOM_Products" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HOM_Reason" EntityType="Self.HOM_Reason" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HOM_Size" EntityType="Self.HOM_Size" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HOM_Source" EntityType="Self.HOM_Source" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HOM_SubBrand" EntityType="Self.HOM_SubBrand" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HOM_SubCategory" EntityType="Self.HOM_SubCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HOM_TypeBrand" EntityType="Self.HOM_TypeBrand" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HOM_TypeRoute" EntityType="Self.HOM_TypeRoute" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HOM_TypeSales" EntityType="Self.HOM_TypeSales" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HOM_Country" EntityType="Self.HOM_Country" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [HOM_Country].[SystemID] AS [SystemID], 
+    [HOM_Country].[CountrySourceCode] AS [CountrySourceCode], 
+    [HOM_Country].[CustomerCode] AS [CustomerCode], 
+    [HOM_Country].[CountrySourceName] AS [CountrySourceName], 
+    [HOM_Country].[CountryId] AS [CountryId], 
+    [HOM_Country].[BranchId] AS [BranchId]
+    FROM [dbo].[HOM_Country] AS [HOM_Country]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="HOM_keyAccount" EntityType="Self.HOM_keyAccount" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [HOM_keyAccount].[SystemID] AS [SystemID], 
+    [HOM_keyAccount].[KeyAccountSourceCode] AS [KeyAccountSourceCode], 
+    [HOM_keyAccount].[KeyAccountSourceName] AS [KeyAccountSourceName], 
+    [HOM_keyAccount].[KeyAccountID] AS [KeyAccountID]
+    FROM [dbo].[HOM_keyAccount] AS [HOM_keyAccount]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="HOM_ProdCategory" EntityType="Self.HOM_ProdCategory" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [HOM_ProdCategory].[SystemID] AS [SystemID], 
+    [HOM_ProdCategory].[CategorySourceCode] AS [CategorySourceCode], 
+    [HOM_ProdCategory].[CategorySourceName] AS [CategorySourceName], 
+    [HOM_ProdCategory].[CategoryID] AS [CategoryID]
+    FROM [dbo].[HOM_ProdCategory] AS [HOM_ProdCategory]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Sales_StagingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="HOM_Branch">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="BranchSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="BranchSourceCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BranchSourceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BranchID" Type="Int32" />
+          <Property Name="ZoneID" Type="Int32" />
+          <Property Name="MarketUnitID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="HOM_Brand">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="BrandSourceCode" />
+            <PropertyRef Name="UnionSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="BrandSourceCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BrandSourceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BrandID" Type="Int32" />
+          <Property Name="CategoryID" Type="Int32" />
+          <Property Name="UnionSourceCode" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HOM_Category">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="CategorySourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="CategorySourceCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CategorySourceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CategoryID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="HOM_Chain">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="BranchSourceCode" />
+            <PropertyRef Name="ChainSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="BranchSourceCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ChainSourceCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ChainSourceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChainID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="HOM_Channel">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="ChannelSourceCode" />
+            <PropertyRef Name="BranchSouceCode" />
+          </Key>
+          <Property Name="SystemID" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="ChannelSourceCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BranchSouceCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ChannelSourceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChannelID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="HOM_Customer">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="BranchSourceCode" />
+            <PropertyRef Name="CustomerSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="BranchSourceCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CustomerSourceCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CustomerSourceName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerID" Type="Int32" />
+          <Property Name="KeyAccountID" Type="Int32" />
+          <Property Name="CustomerKey_SystemOnly" Type="Int32" />
+        </EntityType>
+        <EntityType Name="HOM_CustomerCategory">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="CategorySourceCode" />
+            <PropertyRef Name="BranchSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="CategorySourceCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BranchSourceCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CategorySourceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CategoryID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="HOM_District">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="BranchSourceCode" />
+            <PropertyRef Name="DistrictSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="BranchSourceCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DistrictSourceCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DistrictSourceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DistrictID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="HOM_Flavor">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="FlavorSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="FlavorSourceCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FlavorSourceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FlavorID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="HOM_PayMethod">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="PayMethodSourceCode" />
+            <PropertyRef Name="BranchSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="PayMethodSourceCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PayMethodSourceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PayMtID" Type="Int32" />
+          <Property Name="BranchSourceCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HOM_Presentation">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="PresentSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="PresentSourceCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PresentSourceName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PresentationID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="HOM_ProductGroup">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="PGroupSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="PGroupSourceCode" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PGroupSourceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProductGroupID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="HOM_Products">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="ProductSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="ProductSourceCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProductSourceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProductID" Type="Int32" />
+          <Property Name="ProductKey_SystemOnly" Type="Int32" />
+        </EntityType>
+        <EntityType Name="HOM_Reason">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="ReasonSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="ReasonSourceCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ReasonSourceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ReasonID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="HOM_Size">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="SizeSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="SizeSourceCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SizeSourceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SizeID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="HOM_Source">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="SourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="SourceCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SourceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SourceID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="HOM_SubBrand">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="SubBrandSourceCode" />
+            <PropertyRef Name="UnionSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="SubBrandSourceCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SubBrandSourceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SubBrandID" Type="Int32" />
+          <Property Name="UnionSourceCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HOM_SubCategory">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="SubCategorySourceCode" />
+            <PropertyRef Name="UnionSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="SubCategorySourceCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SubCategorySourceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SubCategoryID" Type="Int32" />
+          <Property Name="UnionSourceCode" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HOM_TypeBrand">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="TypeBrandSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="TypeBrandSourceCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TypeBrandSourceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TypeBrandID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="HOM_TypeRoute">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="TypeRouteSourceCode" />
+            <PropertyRef Name="BranchSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="TypeRouteSourceCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TypeRouteSourceName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TypeRouteID" Type="Int32" />
+          <Property Name="BranchSourceCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HOM_TypeSales">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="TypeSalesSourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="TypeSalesSourceCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TypeSalesSourceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TypeSalesID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="HOM_Country">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="CountrySourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="CountrySourceCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CustomerCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CountrySourceName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CountryId" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="BranchId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="HOM_keyAccount">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="KeyAccountSourceCode" />
+            <PropertyRef Name="KeyAccountID" />
+          </Key>
+          <Property Name="SystemID" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="KeyAccountSourceCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="KeyAccountSourceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KeyAccountID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HOM_ProdCategory">
+          <Key>
+            <PropertyRef Name="SystemID" />
+            <PropertyRef Name="CategorySourceCode" />
+          </Key>
+          <Property Name="SystemID" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="CategorySourceCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CategorySourceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CategoryID" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="SalesStagingContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="HOM_Branch" EntityType="Self.HOM_Branch" />
+          <EntitySet Name="HOM_Brand" EntityType="Self.HOM_Brand" />
+          <EntitySet Name="HOM_Category" EntityType="Self.HOM_Category" />
+          <EntitySet Name="HOM_Chain" EntityType="Self.HOM_Chain" />
+          <EntitySet Name="HOM_Channel" EntityType="Self.HOM_Channel" />
+          <EntitySet Name="HOM_Customer" EntityType="Self.HOM_Customer" />
+          <EntitySet Name="HOM_CustomerCategory" EntityType="Self.HOM_CustomerCategory" />
+          <EntitySet Name="HOM_District" EntityType="Self.HOM_District" />
+          <EntitySet Name="HOM_Flavor" EntityType="Self.HOM_Flavor" />
+          <EntitySet Name="HOM_PayMethod" EntityType="Self.HOM_PayMethod" />
+          <EntitySet Name="HOM_Presentation" EntityType="Self.HOM_Presentation" />
+          <EntitySet Name="HOM_ProductGroup" EntityType="Self.HOM_ProductGroup" />
+          <EntitySet Name="HOM_Products" EntityType="Self.HOM_Products" />
+          <EntitySet Name="HOM_Reason" EntityType="Self.HOM_Reason" />
+          <EntitySet Name="HOM_Size" EntityType="Self.HOM_Size" />
+          <EntitySet Name="HOM_Source" EntityType="Self.HOM_Source" />
+          <EntitySet Name="HOM_SubBrand" EntityType="Self.HOM_SubBrand" />
+          <EntitySet Name="HOM_SubCategory" EntityType="Self.HOM_SubCategory" />
+          <EntitySet Name="HOM_TypeBrand" EntityType="Self.HOM_TypeBrand" />
+          <EntitySet Name="HOM_TypeRoute" EntityType="Self.HOM_TypeRoute" />
+          <EntitySet Name="HOM_TypeSales" EntityType="Self.HOM_TypeSales" />
+          <EntitySet Name="HOM_Country" EntityType="Self.HOM_Country" />
+          <EntitySet Name="HOM_keyAccount" EntityType="Self.HOM_keyAccount" />
+          <EntitySet Name="HOM_ProdCategory" EntityType="Self.HOM_ProdCategory" />
+          <EntitySet Name="AUX_SYSTEM" EntityType="Sales_StagingModel.AUX_SYSTEM" />
+        </EntityContainer>
+        <EntityType Name="AUX_SYSTEM">
+          <Key>
+            <PropertyRef Name="SystemId" />
+          </Key>
+          <Property Name="SystemId" Type="Decimal" Nullable="false" Precision="3" Scale="0" />
+          <Property Name="SystemName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Version" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="systemPrefix" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="CompanyEntity_Code" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Sales_StagingModelStoreContainer" CdmEntityContainer="SalesStagingContext">
+          <EntitySetMapping Name="HOM_Branch">
+            <EntityTypeMapping TypeName="Sales_StagingModel.HOM_Branch">
+              <MappingFragment StoreEntitySet="HOM_Branch">
+                <ScalarProperty Name="SystemID" ColumnName="SystemID" />
+                <ScalarProperty Name="BranchSourceCode" ColumnName="BranchSourceCode" />
+                <ScalarProperty Name="BranchSourceName" ColumnName="BranchSourceName" />
+                <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+                <ScalarProperty Name="ZoneID" ColumnName="ZoneID" />
+                <ScalarProperty Name="MarketUnitID" ColumnName="MarketUnitID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HOM_Brand">
+            <EntityTypeMapping TypeName="Sales_StagingModel.HOM_Brand">
+              <MappingFragment StoreEntitySet="HOM_Brand">
+                <ScalarProperty Name="SystemID" ColumnName="SystemID" />
+                <ScalarProperty Name="BrandSourceCode" ColumnName="BrandSourceCode" />
+                <ScalarProperty Name="BrandSourceName" ColumnName="BrandSourceName" />
+                <ScalarProperty Name="BrandID" ColumnName="BrandID" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="UnionSourceCode" ColumnName="UnionSourceCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HOM_Category">
+            <EntityTypeMapping TypeName="Sales_StagingModel.HOM_Category">
+              <MappingFragment StoreEntitySet="HOM_Category">
+                <ScalarProperty Name="SystemID" ColumnName="SystemID" />
+                <ScalarProperty Name="CategorySourceCode" ColumnName="CategorySourceCode" />
+                <ScalarProperty Name="CategorySourceName" ColumnName="CategorySourceName" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HOM_Chain">
+            <EntityTypeMapping TypeName="Sales_StagingModel.HOM_Chain">
+              <MappingFragment StoreEntitySet="HOM_Chain">
+                <ScalarProperty Name="SystemID" ColumnName="SystemID" />
+                <ScalarProperty Name="BranchSourceCode" ColumnName="BranchSourceCode" />
+                <ScalarProperty Name="ChainSourceCode" ColumnName="ChainSourceCode" />
+                <ScalarProperty Name="ChainSourceName" ColumnName="ChainSourceName" />
+                <ScalarProperty Name="ChainID" ColumnName="ChainID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HOM_Channel">
+            <EntityTypeMapping TypeName="Sales_StagingModel.HOM_Channel">
+              <MappingFragment StoreEntitySet="HOM_Channel">
+                <ScalarProperty Name="SystemID" ColumnName="SystemID" />
+                <ScalarProperty Name="ChannelSourceCode" ColumnName="ChannelSourceCode" />
+                <ScalarProperty Name="BranchSouceCode" ColumnName="BranchSouceCode" />
+                <ScalarProperty Name="ChannelSourceName" ColumnName="ChannelSourceName" />
+                <ScalarProperty Name="ChannelID" ColumnName="ChannelID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HOM_Customer">
+            <EntityTypeMapping TypeName="Sales_StagingModel.HOM_Customer">
+              <MappingFragment StoreEntitySet="HOM_Customer">
+                <ScalarProperty Name="SystemID" ColumnName="SystemID" />
+                <ScalarProperty Name="BranchSourceCode" ColumnName="BranchSourceCode" />
+                <ScalarProperty Name="CustomerSourceCode" ColumnName="CustomerSourceCode" />
+                <ScalarProperty Name="CustomerSourceName" ColumnName="CustomerSourceName" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="KeyAccountID" ColumnName="KeyAccountID" />
+                <ScalarProperty Name="CustomerKey_SystemOnly" ColumnName="CustomerKey_SystemOnly" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HOM_CustomerCategory">
+            <EntityTypeMapping TypeName="Sales_StagingModel.HOM_CustomerCategory">
+              <MappingFragment StoreEntitySet="HOM_CustomerCategory">
+                <ScalarProperty Name="SystemID" ColumnName="SystemID" />
+                <ScalarProperty Name="CategorySourceCode" ColumnName="CategorySourceCode" />
+                <ScalarProperty Name="BranchSourceCode" ColumnName="BranchSourceCode" />
+                <ScalarProperty Name="CategorySourceName" ColumnName="CategorySourceName" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HOM_District">
+            <EntityTypeMapping TypeName="Sales_StagingModel.HOM_District">
+              <MappingFragment StoreEntitySet="HOM_District">
+                <ScalarProperty Name="SystemID" ColumnName="SystemID" />
+                <ScalarProperty Name="BranchSourceCode" ColumnName="BranchSourceCode" />
+                <ScalarProperty Name="DistrictSourceCode" ColumnName="DistrictSourceCode" />
+                <ScalarProperty Name="DistrictSourceName" ColumnName="DistrictSourceName" />
+                <ScalarProperty Name="DistrictID" ColumnName="DistrictID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HOM_Flavor">
+            <EntityTypeMapping TypeName="Sales_StagingModel.HOM_Flavor">
+              <MappingFragment StoreEntitySet="HOM_Flavor">
+                <ScalarProperty Name="SystemID" ColumnName="SystemID" />
+                <ScalarProperty Name="FlavorSourceCode" ColumnName="FlavorSourceCode" />
+                <ScalarProperty Name="FlavorSourceName" ColumnName="FlavorSourceName" />
+                <ScalarProperty Name="FlavorID" ColumnName="FlavorID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HOM_PayMethod">
+            <EntityTypeMapping TypeName="Sales_StagingModel.HOM_PayMethod">
+              <MappingFragment StoreEntitySet="HOM_PayMethod">
+                <ScalarProperty Name="SystemID" ColumnName="SystemID" />
+                <ScalarProperty Name="PayMethodSourceCode" ColumnName="PayMethodSourceCode" />
+                <ScalarProperty Name="PayMethodSourceName" ColumnName="PayMethodSourceName" />
+                <ScalarProperty Name="PayMtID" ColumnName="PayMtID" />
+                <ScalarProperty Name="BranchSourceCode" ColumnName="BranchSourceCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HOM_Presentation">
+            <EntityTypeMapping TypeName="Sales_StagingModel.HOM_Presentation">
+              <MappingFragment StoreEntitySet="HOM_Presentation">
+                <ScalarProperty Name="SystemID" ColumnName="SystemID" />
+                <ScalarProperty Name="PresentSourceCode" ColumnName="PresentSourceCode" />
+                <ScalarProperty Name="PresentSourceName" ColumnName="PresentSourceName" />
+                <ScalarProperty Name="PresentationID" ColumnName="PresentationID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HOM_ProductGroup">
+            <EntityTypeMapping TypeName="Sales_StagingModel.HOM_ProductGroup">
+              <MappingFragment StoreEntitySet="HOM_ProductGroup">
+                <ScalarProperty Name="SystemID" ColumnName="SystemID" />
+                <ScalarProperty Name="PGroupSourceCode" ColumnName="PGroupSourceCode" />
+                <ScalarProperty Name="PGroupSourceName" ColumnName="PGroupSourceName" />
+                <ScalarProperty Name="ProductGroupID" ColumnName="ProductGroupID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HOM_Products">
+            <EntityTypeMapping TypeName="Sales_StagingModel.HOM_Products">
+              <MappingFragment StoreEntitySet="HOM_Products">
+                <ScalarProperty Name="SystemID" ColumnName="SystemID" />
+                <ScalarProperty Name="ProductSourceCode" ColumnName="ProductSourceCode" />
+                <ScalarProperty Name="ProductSourceName" ColumnName="ProductSourceName" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="ProductKey_SystemOnly" ColumnName="ProductKey_SystemOnly" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HOM_Reason">
+            <EntityTypeMapping TypeName="Sales_StagingModel.HOM_Reason">
+              <MappingFragment StoreEntitySet="HOM_Reason">
+                <ScalarProperty Name="SystemID" ColumnName="SystemID" />
+                <ScalarProperty Name="ReasonSourceCode" ColumnName="ReasonSourceCode" />
+                <ScalarProperty Name="ReasonSourceName" ColumnName="ReasonSourceName" />
+                <ScalarProperty Name="ReasonID" ColumnName="ReasonID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HOM_Size">
+            <EntityTypeMapping TypeName="Sales_StagingModel.HOM_Size">
+              <MappingFragment StoreEntitySet="HOM_Size">
+                <ScalarProperty Name="SystemID" ColumnName="SystemID" />
+                <ScalarProperty Name="SizeSourceCode" ColumnName="SizeSourceCode" />
+                <ScalarProperty Name="SizeSourceName" ColumnName="SizeSourceName" />
+                <ScalarProperty Name="SizeID" ColumnName="SizeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HOM_Source">
+            <EntityTypeMapping TypeName="Sales_StagingModel.HOM_Source">
+              <MappingFragment StoreEntitySet="HOM_Source">
+                <ScalarProperty Name="SystemID" ColumnName="SystemID" />
+                <ScalarProperty Name="SourceCode" ColumnName="SourceCode" />
+                <ScalarProperty Name="SourceName" ColumnName="SourceName" />
+                <ScalarProperty Name="SourceID" ColumnName="SourceID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HOM_SubBrand">
+            <EntityTypeMapping TypeName="Sales_StagingModel.HOM_SubBrand">
+              <MappingFragment StoreEntitySet="HOM_SubBrand">
+                <ScalarProperty Name="SystemID" ColumnName="SystemID" />
+                <ScalarProperty Name="SubBrandSourceCode" ColumnName="SubBrandSourceCode" />
+                <ScalarProperty Name="SubBrandSourceName" ColumnName="SubBrandSourceName" />
+                <ScalarProperty Name="SubBrandID" ColumnName="SubBrandID" />
+                <ScalarProperty Name="UnionSourceCode" ColumnName="UnionSourceCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HOM_SubCategory">
+            <EntityTypeMapping TypeName="Sales_StagingModel.HOM_SubCategory">
+              <MappingFragment StoreEntitySet="HOM_SubCategory">
+                <ScalarProperty Name="SystemID" ColumnName="SystemID" />
+                <ScalarProperty Name="SubCategorySourceCode" ColumnName="SubCategorySourceCode" />
+                <ScalarProperty Name="SubCategorySourceName" ColumnName="SubCategorySourceName" />
+                <ScalarProperty Name="SubCategoryID" ColumnName="SubCategoryID" />
+                <ScalarProperty Name="UnionSourceCode" ColumnName="UnionSourceCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HOM_TypeBrand">
+            <EntityTypeMapping TypeName="Sales_StagingModel.HOM_TypeBrand">
+              <MappingFragment StoreEntitySet="HOM_TypeBrand">
+                <ScalarProperty Name="SystemID" ColumnName="SystemID" />
+                <ScalarProperty Name="TypeBrandSourceCode" ColumnName="TypeBrandSourceCode" />
+                <ScalarProperty Name="TypeBrandSourceName" ColumnName="TypeBrandSourceName" />
+                <ScalarProperty Name="TypeBrandID" ColumnName="TypeBrandID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HOM_TypeRoute">
+            <EntityTypeMapping TypeName="Sales_StagingModel.HOM_TypeRoute">
+              <MappingFragment StoreEntitySet="HOM_TypeRoute">
+                <ScalarProperty Name="SystemID" ColumnName="SystemID" />
+                <ScalarProperty Name="TypeRouteSourceCode" ColumnName="TypeRouteSourceCode" />
+                <ScalarProperty Name="TypeRouteSourceName" ColumnName="TypeRouteSourceName" />
+                <ScalarProperty Name="TypeRouteID" ColumnName="TypeRouteID" />
+                <ScalarProperty Name="BranchSourceCode" ColumnName="BranchSourceCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HOM_TypeSales">
+            <EntityTypeMapping TypeName="Sales_StagingModel.HOM_TypeSales">
+              <MappingFragment StoreEntitySet="HOM_TypeSales">
+                <ScalarProperty Name="SystemID" ColumnName="SystemID" />
+                <ScalarProperty Name="TypeSalesSourceCode" ColumnName="TypeSalesSourceCode" />
+                <ScalarProperty Name="TypeSalesSourceName" ColumnName="TypeSalesSourceName" />
+                <ScalarProperty Name="TypeSalesID" ColumnName="TypeSalesID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HOM_Country">
+            <EntityTypeMapping TypeName="Sales_StagingModel.HOM_Country">
+              <MappingFragment StoreEntitySet="HOM_Country">
+                <ScalarProperty Name="SystemID" ColumnName="SystemID" />
+                <ScalarProperty Name="CountrySourceCode" ColumnName="CountrySourceCode" />
+                <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+                <ScalarProperty Name="CountrySourceName" ColumnName="CountrySourceName" />
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+                <ScalarProperty Name="BranchId" ColumnName="BranchId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HOM_keyAccount">
+            <EntityTypeMapping TypeName="Sales_StagingModel.HOM_keyAccount">
+              <MappingFragment StoreEntitySet="HOM_keyAccount">
+                <ScalarProperty Name="SystemID" ColumnName="SystemID" />
+                <ScalarProperty Name="KeyAccountSourceCode" ColumnName="KeyAccountSourceCode" />
+                <ScalarProperty Name="KeyAccountSourceName" ColumnName="KeyAccountSourceName" />
+                <ScalarProperty Name="KeyAccountID" ColumnName="KeyAccountID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HOM_ProdCategory">
+            <EntityTypeMapping TypeName="Sales_StagingModel.HOM_ProdCategory">
+              <MappingFragment StoreEntitySet="HOM_ProdCategory">
+                <ScalarProperty Name="SystemID" ColumnName="SystemID" />
+                <ScalarProperty Name="CategorySourceCode" ColumnName="CategorySourceCode" />
+                <ScalarProperty Name="CategorySourceName" ColumnName="CategorySourceName" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AUX_SYSTEM">
+            <EntityTypeMapping TypeName="Sales_StagingModel.AUX_SYSTEM">
+              <MappingFragment StoreEntitySet="AUX_SYSTEM">
+                <ScalarProperty Name="CompanyEntity_Code" ColumnName="CompanyEntity_Code" />
+                <ScalarProperty Name="systemPrefix" ColumnName="systemPrefix" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="SystemName" ColumnName="SystemName" />
+                <ScalarProperty Name="SystemId" ColumnName="SystemId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="acdfdb027c394eac8eafd27e8f86a9a7" Name="Diagram1" ZoomLevel="40">
+        <EntityTypeShape EntityType="Sales_StagingModel.HOM_Branch" Width="1.5" PointX="0.5" PointY="6.625" IsExpanded="true" FillColor="0, 192, 0" />
+        <EntityTypeShape EntityType="Sales_StagingModel.HOM_Brand" Width="1.5" PointX="0.5" PointY="0.625" IsExpanded="true" FillColor="Red" />
+        <EntityTypeShape EntityType="Sales_StagingModel.HOM_Category" Width="1.5" PointX="19.375" PointY="2.75" IsExpanded="true" FillColor="Khaki" />
+        <EntityTypeShape EntityType="Sales_StagingModel.HOM_Chain" Width="1.5" PointX="2.25" PointY="3.625" IsExpanded="true" FillColor="Yellow" />
+        <EntityTypeShape EntityType="Sales_StagingModel.HOM_Channel" Width="1.5" PointX="9.5" PointY="6.625" IsExpanded="true" FillColor="Blue" />
+        <EntityTypeShape EntityType="Sales_StagingModel.HOM_Customer" Width="1.5" PointX="7.5" PointY="3.5" IsExpanded="true" FillColor="Goldenrod" />
+        <EntityTypeShape EntityType="Sales_StagingModel.HOM_CustomerCategory" Width="1.5" PointX="0.5" PointY="3.625" IsExpanded="true" FillColor="Yellow" />
+        <EntityTypeShape EntityType="Sales_StagingModel.HOM_District" Width="1.5" PointX="4" PointY="6.625" IsExpanded="true" FillColor="0, 192, 0" />
+        <EntityTypeShape EntityType="Sales_StagingModel.HOM_Flavor" Width="1.5" PointX="2.25" PointY="0.625" IsExpanded="true" FillColor="Red" />
+        <EntityTypeShape EntityType="Sales_StagingModel.HOM_PayMethod" Width="1.5" PointX="5.625" PointY="3.625" IsExpanded="true" FillColor="Yellow" />
+        <EntityTypeShape EntityType="Sales_StagingModel.HOM_Presentation" Width="1.5" PointX="3.875" PointY="0.625" IsExpanded="true" FillColor="Red" />
+        <EntityTypeShape EntityType="Sales_StagingModel.HOM_ProductGroup" Width="1.5" PointX="5.5" PointY="0.625" IsExpanded="true" FillColor="Red" />
+        <EntityTypeShape EntityType="Sales_StagingModel.HOM_Products" Width="1.5" PointX="17.625" PointY="0.625" IsExpanded="true" FillColor="SandyBrown" />
+        <EntityTypeShape EntityType="Sales_StagingModel.HOM_Reason" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" FillColor="Blue" />
+        <EntityTypeShape EntityType="Sales_StagingModel.HOM_Size" Width="1.5" PointX="7.125" PointY="0.625" IsExpanded="true" FillColor="Red" />
+        <EntityTypeShape EntityType="Sales_StagingModel.HOM_Source" Width="1.5" PointX="8.75" PointY="0.625" IsExpanded="true" FillColor="Red" />
+        <EntityTypeShape EntityType="Sales_StagingModel.HOM_SubBrand" Width="1.5" PointX="10.5" PointY="0.625" IsExpanded="true" FillColor="Red" />
+        <EntityTypeShape EntityType="Sales_StagingModel.HOM_SubCategory" Width="1.5" PointX="12.25" PointY="0.625" IsExpanded="true" FillColor="Red" />
+        <EntityTypeShape EntityType="Sales_StagingModel.HOM_TypeBrand" Width="1.5" PointX="13.875" PointY="0.625" IsExpanded="true" FillColor="Red" />
+        <EntityTypeShape EntityType="Sales_StagingModel.HOM_TypeRoute" Width="1.5" PointX="5.75" PointY="6.625" IsExpanded="true" FillColor="0, 192, 0" />
+        <EntityTypeShape EntityType="Sales_StagingModel.HOM_TypeSales" Width="1.5" PointX="15.5" PointY="0.625" IsExpanded="true" FillColor="Red" />
+        <EntityTypeShape EntityType="Sales_StagingModel.HOM_Country" Width="1.5" PointX="2.25" PointY="6.625" IsExpanded="true" FillColor="0, 192, 0" />
+        <EntityTypeShape EntityType="Sales_StagingModel.HOM_keyAccount" Width="1.5" PointX="3.875" PointY="3.625" IsExpanded="true" FillColor="Yellow" />
+        <EntityTypeShape EntityType="Sales_StagingModel.HOM_ProdCategory" Width="1.5" PointX="19.375" PointY="0.625" IsExpanded="true" FillColor="SandyBrown" />
+        <EntityTypeShape EntityType="Sales_StagingModel.AUX_SYSTEM" Width="1.5" PointX="13.375" PointY="6.625" FillColor="64, 64, 64" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

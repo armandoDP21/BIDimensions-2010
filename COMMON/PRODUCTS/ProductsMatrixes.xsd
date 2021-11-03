@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ProductsMatrixes" targetNamespace="http://tempuri.org/ProductsMatrixes.xsd" xmlns:mstns="http://tempuri.org/ProductsMatrixes.xsd" xmlns="http://tempuri.org/ProductsMatrixes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="SalesDataMartConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SalesDataMartConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.My.MySettings.GlobalReference.Default.SalesDataMartConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ProductsMatrixes" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ProductsMatrixes" msprop:Generator_UserDSName="ProductsMatrixes">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="M01_Category" msprop:Generator_TableClassName="M01_CategoryDataTable" msprop:Generator_TableVarName="tableM01_Category" msprop:Generator_RowChangedName="M01_CategoryRowChanged" msprop:Generator_TablePropName="M01_Category" msprop:Generator_RowDeletingName="M01_CategoryRowDeleting" msprop:Generator_RowChangingName="M01_CategoryRowChanging" msprop:Generator_RowEvHandlerName="M01_CategoryRowChangeEventHandler" msprop:Generator_RowDeletedName="M01_CategoryRowDeleted" msprop:Generator_RowClassName="M01_CategoryRow" msprop:Generator_UserTableName="M01_Category" msprop:Generator_RowEvArgName="M01_CategoryRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CategoryID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCategoryID" msprop:Generator_ColumnPropNameInRow="CategoryID" msprop:Generator_ColumnPropNameInTable="CategoryIDColumn" msprop:Generator_UserColumnName="CategoryID" type="xs:int" />
+              <xs:element name="CategoryName" msprop:Generator_ColumnVarNameInTable="columnCategoryName" msprop:Generator_ColumnPropNameInRow="CategoryName" msprop:Generator_ColumnPropNameInTable="CategoryNameColumn" msprop:Generator_UserColumnName="CategoryName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Active_Flag" msprop:Generator_ColumnVarNameInTable="columnActive_Flag" msprop:Generator_ColumnPropNameInRow="Active_Flag" msprop:Generator_ColumnPropNameInTable="Active_FlagColumn" msprop:Generator_UserColumnName="Active_Flag" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SystemOnly" msprop:Generator_ColumnVarNameInTable="columnSystemOnly" msprop:Generator_ColumnPropNameInRow="SystemOnly" msprop:Generator_ColumnPropNameInTable="SystemOnlyColumn" msprop:Generator_UserColumnName="SystemOnly" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="M01_POT_Status" msprop:Generator_TableClassName="M01_POT_StatusDataTable" msprop:Generator_TableVarName="tableM01_POT_Status" msprop:Generator_RowChangedName="M01_POT_StatusRowChanged" msprop:Generator_TablePropName="M01_POT_Status" msprop:Generator_RowDeletingName="M01_POT_StatusRowDeleting" msprop:Generator_RowChangingName="M01_POT_StatusRowChanging" msprop:Generator_RowEvHandlerName="M01_POT_StatusRowChangeEventHandler" msprop:Generator_RowDeletedName="M01_POT_StatusRowDeleted" msprop:Generator_RowClassName="M01_POT_StatusRow" msprop:Generator_UserTableName="M01_POT_Status" msprop:Generator_RowEvArgName="M01_POT_StatusRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="POT_StatusID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnPOT_StatusID" msprop:Generator_ColumnPropNameInRow="POT_StatusID" msprop:Generator_ColumnPropNameInTable="POT_StatusIDColumn" msprop:Generator_UserColumnName="POT_StatusID" type="xs:int" />
+              <xs:element name="POT_StatusName" msprop:Generator_ColumnVarNameInTable="columnPOT_StatusName" msprop:Generator_ColumnPropNameInRow="POT_StatusName" msprop:Generator_ColumnPropNameInTable="POT_StatusNameColumn" msprop:Generator_UserColumnName="POT_StatusName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="M01_Presentation" msprop:Generator_TableClassName="M01_PresentationDataTable" msprop:Generator_TableVarName="tableM01_Presentation" msprop:Generator_RowChangedName="M01_PresentationRowChanged" msprop:Generator_TablePropName="M01_Presentation" msprop:Generator_RowDeletingName="M01_PresentationRowDeleting" msprop:Generator_RowChangingName="M01_PresentationRowChanging" msprop:Generator_RowEvHandlerName="M01_PresentationRowChangeEventHandler" msprop:Generator_RowDeletedName="M01_PresentationRowDeleted" msprop:Generator_RowClassName="M01_PresentationRow" msprop:Generator_UserTableName="M01_Presentation" msprop:Generator_RowEvArgName="M01_PresentationRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PresentationID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnPresentationID" msprop:Generator_ColumnPropNameInRow="PresentationID" msprop:Generator_ColumnPropNameInTable="PresentationIDColumn" msprop:Generator_UserColumnName="PresentationID" type="xs:int" />
+              <xs:element name="PresentationName" msprop:Generator_ColumnVarNameInTable="columnPresentationName" msprop:Generator_ColumnPropNameInRow="PresentationName" msprop:Generator_ColumnPropNameInTable="PresentationNameColumn" msprop:Generator_UserColumnName="PresentationName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Active_Flag" msprop:Generator_ColumnVarNameInTable="columnActive_Flag" msprop:Generator_ColumnPropNameInRow="Active_Flag" msprop:Generator_ColumnPropNameInTable="Active_FlagColumn" msprop:Generator_UserColumnName="Active_Flag" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SystemOnly" msprop:Generator_ColumnVarNameInTable="columnSystemOnly" msprop:Generator_ColumnPropNameInRow="SystemOnly" msprop:Generator_ColumnPropNameInTable="SystemOnlyColumn" msprop:Generator_UserColumnName="SystemOnly" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="M01_ProductGroup" msprop:Generator_TableClassName="M01_ProductGroupDataTable" msprop:Generator_TableVarName="tableM01_ProductGroup" msprop:Generator_RowChangedName="M01_ProductGroupRowChanged" msprop:Generator_TablePropName="M01_ProductGroup" msprop:Generator_RowDeletingName="M01_ProductGroupRowDeleting" msprop:Generator_RowChangingName="M01_ProductGroupRowChanging" msprop:Generator_RowEvHandlerName="M01_ProductGroupRowChangeEventHandler" msprop:Generator_RowDeletedName="M01_ProductGroupRowDeleted" msprop:Generator_RowClassName="M01_ProductGroupRow" msprop:Generator_UserTableName="M01_ProductGroup" msprop:Generator_RowEvArgName="M01_ProductGroupRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="GroupID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnGroupID" msprop:Generator_ColumnPropNameInRow="GroupID" msprop:Generator_ColumnPropNameInTable="GroupIDColumn" msprop:Generator_UserColumnName="GroupID" type="xs:int" />
+              <xs:element name="GroupName" msprop:Generator_ColumnVarNameInTable="columnGroupName" msprop:Generator_ColumnPropNameInRow="GroupName" msprop:Generator_ColumnPropNameInTable="GroupNameColumn" msprop:Generator_UserColumnName="GroupName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Active_Flag" msprop:Generator_ColumnVarNameInTable="columnActive_Flag" msprop:Generator_ColumnPropNameInRow="Active_Flag" msprop:Generator_ColumnPropNameInTable="Active_FlagColumn" msprop:Generator_UserColumnName="Active_Flag" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SystemOnly" msprop:Generator_ColumnVarNameInTable="columnSystemOnly" msprop:Generator_ColumnPropNameInRow="SystemOnly" msprop:Generator_ColumnPropNameInTable="SystemOnlyColumn" msprop:Generator_UserColumnName="SystemOnly" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="M01_Size" msprop:Generator_TableClassName="M01_SizeDataTable" msprop:Generator_TableVarName="tableM01_Size" msprop:Generator_RowChangedName="M01_SizeRowChanged" msprop:Generator_TablePropName="M01_Size" msprop:Generator_RowDeletingName="M01_SizeRowDeleting" msprop:Generator_RowChangingName="M01_SizeRowChanging" msprop:Generator_RowEvHandlerName="M01_SizeRowChangeEventHandler" msprop:Generator_RowDeletedName="M01_SizeRowDeleted" msprop:Generator_RowClassName="M01_SizeRow" msprop:Generator_UserTableName="M01_Size" msprop:Generator_RowEvArgName="M01_SizeRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SizeID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnSizeID" msprop:Generator_ColumnPropNameInRow="SizeID" msprop:Generator_ColumnPropNameInTable="SizeIDColumn" msprop:Generator_UserColumnName="SizeID" type="xs:int" />
+              <xs:element name="SizeName" msprop:Generator_ColumnVarNameInTable="columnSizeName" msprop:Generator_ColumnPropNameInRow="SizeName" msprop:Generator_ColumnPropNameInTable="SizeNameColumn" msprop:Generator_UserColumnName="SizeName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Active_Flag" msprop:Generator_ColumnVarNameInTable="columnActive_Flag" msprop:Generator_ColumnPropNameInRow="Active_Flag" msprop:Generator_ColumnPropNameInTable="Active_FlagColumn" msprop:Generator_UserColumnName="Active_Flag" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SystemOnly" msprop:Generator_ColumnVarNameInTable="columnSystemOnly" msprop:Generator_ColumnPropNameInRow="SystemOnly" msprop:Generator_ColumnPropNameInTable="SystemOnlyColumn" msprop:Generator_UserColumnName="SystemOnly" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="M01_Source" msprop:Generator_TableClassName="M01_SourceDataTable" msprop:Generator_TableVarName="tableM01_Source" msprop:Generator_RowChangedName="M01_SourceRowChanged" msprop:Generator_TablePropName="M01_Source" msprop:Generator_RowDeletingName="M01_SourceRowDeleting" msprop:Generator_RowChangingName="M01_SourceRowChanging" msprop:Generator_RowEvHandlerName="M01_SourceRowChangeEventHandler" msprop:Generator_RowDeletedName="M01_SourceRowDeleted" msprop:Generator_RowClassName="M01_SourceRow" msprop:Generator_UserTableName="M01_Source" msprop:Generator_RowEvArgName="M01_SourceRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SourceID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnSourceID" msprop:Generator_ColumnPropNameInRow="SourceID" msprop:Generator_ColumnPropNameInTable="SourceIDColumn" msprop:Generator_UserColumnName="SourceID" type="xs:int" />
+              <xs:element name="SourceName" msprop:Generator_ColumnVarNameInTable="columnSourceName" msprop:Generator_ColumnPropNameInRow="SourceName" msprop:Generator_ColumnPropNameInTable="SourceNameColumn" msprop:Generator_UserColumnName="SourceName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Active_Flag" msprop:Generator_ColumnVarNameInTable="columnActive_Flag" msprop:Generator_ColumnPropNameInRow="Active_Flag" msprop:Generator_ColumnPropNameInTable="Active_FlagColumn" msprop:Generator_UserColumnName="Active_Flag" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SystemOnly" msprop:Generator_ColumnVarNameInTable="columnSystemOnly" msprop:Generator_ColumnPropNameInRow="SystemOnly" msprop:Generator_ColumnPropNameInTable="SystemOnlyColumn" msprop:Generator_UserColumnName="SystemOnly" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="M01_SubBrand" msprop:Generator_TableClassName="M01_SubBrandDataTable" msprop:Generator_TableVarName="tableM01_SubBrand" msprop:Generator_RowChangedName="M01_SubBrandRowChanged" msprop:Generator_TablePropName="M01_SubBrand" msprop:Generator_RowDeletingName="M01_SubBrandRowDeleting" msprop:Generator_RowChangingName="M01_SubBrandRowChanging" msprop:Generator_RowEvHandlerName="M01_SubBrandRowChangeEventHandler" msprop:Generator_RowDeletedName="M01_SubBrandRowDeleted" msprop:Generator_RowClassName="M01_SubBrandRow" msprop:Generator_UserTableName="M01_SubBrand" msprop:Generator_RowEvArgName="M01_SubBrandRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SubBrandID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnSubBrandID" msprop:Generator_ColumnPropNameInRow="SubBrandID" msprop:Generator_ColumnPropNameInTable="SubBrandIDColumn" msprop:Generator_UserColumnName="SubBrandID" type="xs:int" />
+              <xs:element name="SubBrandName" msprop:Generator_ColumnVarNameInTable="columnSubBrandName" msprop:Generator_ColumnPropNameInRow="SubBrandName" msprop:Generator_ColumnPropNameInTable="SubBrandNameColumn" msprop:Generator_UserColumnName="SubBrandName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Active_Flag" msprop:Generator_ColumnVarNameInTable="columnActive_Flag" msprop:Generator_ColumnPropNameInRow="Active_Flag" msprop:Generator_ColumnPropNameInTable="Active_FlagColumn" msprop:Generator_UserColumnName="Active_Flag" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SystemOnly" msprop:Generator_ColumnVarNameInTable="columnSystemOnly" msprop:Generator_ColumnPropNameInRow="SystemOnly" msprop:Generator_ColumnPropNameInTable="SystemOnlyColumn" msprop:Generator_UserColumnName="SystemOnly" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="M01_SubCategory" msprop:Generator_TableClassName="M01_SubCategoryDataTable" msprop:Generator_TableVarName="tableM01_SubCategory" msprop:Generator_RowChangedName="M01_SubCategoryRowChanged" msprop:Generator_TablePropName="M01_SubCategory" msprop:Generator_RowDeletingName="M01_SubCategoryRowDeleting" msprop:Generator_RowChangingName="M01_SubCategoryRowChanging" msprop:Generator_RowEvHandlerName="M01_SubCategoryRowChangeEventHandler" msprop:Generator_RowDeletedName="M01_SubCategoryRowDeleted" msprop:Generator_RowClassName="M01_SubCategoryRow" msprop:Generator_UserTableName="M01_SubCategory" msprop:Generator_RowEvArgName="M01_SubCategoryRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SubCategoryID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnSubCategoryID" msprop:Generator_ColumnPropNameInRow="SubCategoryID" msprop:Generator_ColumnPropNameInTable="SubCategoryIDColumn" msprop:Generator_UserColumnName="SubCategoryID" type="xs:int" />
+              <xs:element name="SubCategoryName" msprop:Generator_ColumnVarNameInTable="columnSubCategoryName" msprop:Generator_ColumnPropNameInRow="SubCategoryName" msprop:Generator_ColumnPropNameInTable="SubCategoryNameColumn" msprop:Generator_UserColumnName="SubCategoryName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Active_Flag" msprop:Generator_ColumnVarNameInTable="columnActive_Flag" msprop:Generator_ColumnPropNameInRow="Active_Flag" msprop:Generator_ColumnPropNameInTable="Active_FlagColumn" msprop:Generator_UserColumnName="Active_Flag" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SystemOnly" msprop:Generator_ColumnVarNameInTable="columnSystemOnly" msprop:Generator_ColumnPropNameInRow="SystemOnly" msprop:Generator_ColumnPropNameInTable="SystemOnlyColumn" msprop:Generator_UserColumnName="SystemOnly" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="M01_TypeBrand" msprop:Generator_TableClassName="M01_TypeBrandDataTable" msprop:Generator_TableVarName="tableM01_TypeBrand" msprop:Generator_RowChangedName="M01_TypeBrandRowChanged" msprop:Generator_TablePropName="M01_TypeBrand" msprop:Generator_RowDeletingName="M01_TypeBrandRowDeleting" msprop:Generator_RowChangingName="M01_TypeBrandRowChanging" msprop:Generator_RowEvHandlerName="M01_TypeBrandRowChangeEventHandler" msprop:Generator_RowDeletedName="M01_TypeBrandRowDeleted" msprop:Generator_RowClassName="M01_TypeBrandRow" msprop:Generator_UserTableName="M01_TypeBrand" msprop:Generator_RowEvArgName="M01_TypeBrandRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TypeBrandID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnTypeBrandID" msprop:Generator_ColumnPropNameInRow="TypeBrandID" msprop:Generator_ColumnPropNameInTable="TypeBrandIDColumn" msprop:Generator_UserColumnName="TypeBrandID" type="xs:int" />
+              <xs:element name="TypeBrandName" msprop:Generator_ColumnVarNameInTable="columnTypeBrandName" msprop:Generator_ColumnPropNameInRow="TypeBrandName" msprop:Generator_ColumnPropNameInTable="TypeBrandNameColumn" msprop:Generator_UserColumnName="TypeBrandName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Active_Flag" msprop:Generator_ColumnVarNameInTable="columnActive_Flag" msprop:Generator_ColumnPropNameInRow="Active_Flag" msprop:Generator_ColumnPropNameInTable="Active_FlagColumn" msprop:Generator_UserColumnName="Active_Flag" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SystemOnly" msprop:Generator_ColumnVarNameInTable="columnSystemOnly" msprop:Generator_ColumnPropNameInRow="SystemOnly" msprop:Generator_ColumnPropNameInTable="SystemOnlyColumn" msprop:Generator_UserColumnName="SystemOnly" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="M01_TypeOFSales" msprop:Generator_TableClassName="M01_TypeOFSalesDataTable" msprop:Generator_TableVarName="tableM01_TypeOFSales" msprop:Generator_RowChangedName="M01_TypeOFSalesRowChanged" msprop:Generator_TablePropName="M01_TypeOFSales" msprop:Generator_RowDeletingName="M01_TypeOFSalesRowDeleting" msprop:Generator_RowChangingName="M01_TypeOFSalesRowChanging" msprop:Generator_RowEvHandlerName="M01_TypeOFSalesRowChangeEventHandler" msprop:Generator_RowDeletedName="M01_TypeOFSalesRowDeleted" msprop:Generator_RowClassName="M01_TypeOFSalesRow" msprop:Generator_UserTableName="M01_TypeOFSales" msprop:Generator_RowEvArgName="M01_TypeOFSalesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TypeSalesID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnTypeSalesID" msprop:Generator_ColumnPropNameInRow="TypeSalesID" msprop:Generator_ColumnPropNameInTable="TypeSalesIDColumn" msprop:Generator_UserColumnName="TypeSalesID" type="xs:int" />
+              <xs:element name="TypeSalesName" msprop:Generator_ColumnVarNameInTable="columnTypeSalesName" msprop:Generator_ColumnPropNameInRow="TypeSalesName" msprop:Generator_ColumnPropNameInTable="TypeSalesNameColumn" msprop:Generator_UserColumnName="TypeSalesName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Active_Flag" msprop:Generator_ColumnVarNameInTable="columnActive_Flag" msprop:Generator_ColumnPropNameInRow="Active_Flag" msprop:Generator_ColumnPropNameInTable="Active_FlagColumn" msprop:Generator_UserColumnName="Active_Flag" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SystemOnly" msprop:Generator_ColumnVarNameInTable="columnSystemOnly" msprop:Generator_ColumnPropNameInRow="SystemOnly" msprop:Generator_ColumnPropNameInTable="SystemOnlyColumn" msprop:Generator_UserColumnName="SystemOnly" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="M01_Brand" msprop:Generator_TableClassName="M01_BrandDataTable" msprop:Generator_TableVarName="tableM01_Brand" msprop:Generator_RowChangedName="M01_BrandRowChanged" msprop:Generator_TablePropName="M01_Brand" msprop:Generator_RowDeletingName="M01_BrandRowDeleting" msprop:Generator_RowChangingName="M01_BrandRowChanging" msprop:Generator_RowEvHandlerName="M01_BrandRowChangeEventHandler" msprop:Generator_RowDeletedName="M01_BrandRowDeleted" msprop:Generator_RowClassName="M01_BrandRow" msprop:Generator_UserTableName="M01_Brand" msprop:Generator_RowEvArgName="M01_BrandRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BrandID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnBrandID" msprop:Generator_ColumnPropNameInRow="BrandID" msprop:Generator_ColumnPropNameInTable="BrandIDColumn" msprop:Generator_UserColumnName="BrandID" type="xs:int" />
+              <xs:element name="BrandName" msprop:Generator_ColumnVarNameInTable="columnBrandName" msprop:Generator_ColumnPropNameInRow="BrandName" msprop:Generator_ColumnPropNameInTable="BrandNameColumn" msprop:Generator_UserColumnName="BrandName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Active_Flag" msprop:Generator_ColumnVarNameInTable="columnActive_Flag" msprop:Generator_ColumnPropNameInRow="Active_Flag" msprop:Generator_ColumnPropNameInTable="Active_FlagColumn" msprop:Generator_UserColumnName="Active_Flag" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SystemOnly" msprop:Generator_ColumnVarNameInTable="columnSystemOnly" msprop:Generator_ColumnPropNameInRow="SystemOnly" msprop:Generator_ColumnPropNameInTable="SystemOnlyColumn" msprop:Generator_UserColumnName="SystemOnly" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="M01_Flavor" msprop:Generator_TableClassName="M01_FlavorDataTable" msprop:Generator_TableVarName="tableM01_Flavor" msprop:Generator_RowChangedName="M01_FlavorRowChanged" msprop:Generator_TablePropName="M01_Flavor" msprop:Generator_RowDeletingName="M01_FlavorRowDeleting" msprop:Generator_RowChangingName="M01_FlavorRowChanging" msprop:Generator_RowEvHandlerName="M01_FlavorRowChangeEventHandler" msprop:Generator_RowDeletedName="M01_FlavorRowDeleted" msprop:Generator_RowClassName="M01_FlavorRow" msprop:Generator_UserTableName="M01_Flavor" msprop:Generator_RowEvArgName="M01_FlavorRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FlavorID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnFlavorID" msprop:Generator_ColumnPropNameInRow="FlavorID" msprop:Generator_ColumnPropNameInTable="FlavorIDColumn" msprop:Generator_UserColumnName="FlavorID" type="xs:int" />
+              <xs:element name="FlavorName" msprop:Generator_ColumnVarNameInTable="columnFlavorName" msprop:Generator_ColumnPropNameInRow="FlavorName" msprop:Generator_ColumnPropNameInTable="FlavorNameColumn" msprop:Generator_UserColumnName="FlavorName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Active_Flag" msprop:Generator_ColumnVarNameInTable="columnActive_Flag" msprop:Generator_ColumnPropNameInRow="Active_Flag" msprop:Generator_ColumnPropNameInTable="Active_FlagColumn" msprop:Generator_UserColumnName="Active_Flag" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SystemOnly" msprop:Generator_ColumnVarNameInTable="columnSystemOnly" msprop:Generator_ColumnPropNameInRow="SystemOnly" msprop:Generator_ColumnPropNameInTable="SystemOnlyColumn" msprop:Generator_UserColumnName="SystemOnly" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:M01_Category" />
+      <xs:field xpath="mstns:CategoryID" />
+    </xs:unique>
+    <xs:unique name="M01_POT_Status_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:M01_POT_Status" />
+      <xs:field xpath="mstns:POT_StatusID" />
+    </xs:unique>
+    <xs:unique name="M01_Presentation_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:M01_Presentation" />
+      <xs:field xpath="mstns:PresentationID" />
+    </xs:unique>
+    <xs:unique name="M01_ProductGroup_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:M01_ProductGroup" />
+      <xs:field xpath="mstns:GroupID" />
+    </xs:unique>
+    <xs:unique name="M01_Size_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:M01_Size" />
+      <xs:field xpath="mstns:SizeID" />
+    </xs:unique>
+    <xs:unique name="M01_Source_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:M01_Source" />
+      <xs:field xpath="mstns:SourceID" />
+    </xs:unique>
+    <xs:unique name="M01_SubBrand_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:M01_SubBrand" />
+      <xs:field xpath="mstns:SubBrandID" />
+    </xs:unique>
+    <xs:unique name="M01_SubCategory_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:M01_SubCategory" />
+      <xs:field xpath="mstns:SubCategoryID" />
+    </xs:unique>
+    <xs:unique name="M01_TypeBrand_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:M01_TypeBrand" />
+      <xs:field xpath="mstns:TypeBrandID" />
+    </xs:unique>
+    <xs:unique name="M01_TypeOFSales_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:M01_TypeOFSales" />
+      <xs:field xpath="mstns:TypeSalesID" />
+    </xs:unique>
+    <xs:unique name="M01_Brand_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:M01_Brand" />
+      <xs:field xpath="mstns:BrandID" />
+    </xs:unique>
+    <xs:unique name="M01_Flavor_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:M01_Flavor" />
+      <xs:field xpath="mstns:FlavorID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

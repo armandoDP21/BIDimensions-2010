@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Financial_Interfaces" Class="ProductsTestDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=pepwap11835;Initial Catalog=Financial_Interfaces;Integrated Security=True" SettingsObjectName="My.MySettings" SettingsPropertyName="Financial_InterfacesConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.M01_Products" Member="M01_Products">
+    <Type Name="M01_Product">
+      <Column Name="ProductKey" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CountryID" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="ProductID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="SAP_ProductCode" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Grams" Type="System.Decimal" DbType="Decimal(8,4)" CanBeNull="true" />
+      <Column Name="Standar_Cost" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="PricePoint" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="UnitsPerCase" Type="System.Decimal" DbType="Decimal(5,0)" CanBeNull="true" />
+      <Column Name="PresentationID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SourceID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SubCategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BrandID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SubBrandID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TypeBrandID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SizeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FlavorID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Active_Flag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SystemOnly" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Flag_innovation" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="StartDate_innovation" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndDate_innovation" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="POT_StatusID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UnitsForDistribution" Type="System.Decimal" DbType="Decimal(5,0)" CanBeNull="true" />
+      <Column Name="TypeSalesID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.D01_PRODUCTS" Member="D01_PRODUCTs">
+    <Type Name="D01_PRODUCT">
+      <Column Name="ProductKey" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CountryID" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="ProductID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="SAP_ProductCode" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="UnitsPerCase" Type="System.Decimal" DbType="Decimal(5,0)" CanBeNull="true" />
+      <Column Name="PresentationID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PresentationName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GroupName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SourceID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SourceName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CategoryName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SubCategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SubCategoryName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BrandID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BrandName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SubBrandID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SubBrandName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TypeBrandID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TypeBrandName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SizeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SizeName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FlavorID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FlavorName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Active_Flag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SystemOnly" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Flag_innovation" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="StartDate_innovation" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndDate_innovation" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PricePoint" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="POT_StatusID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UnitsForDistribution" Type="System.Decimal" DbType="Decimal(5,0)" CanBeNull="true" />
+      <Column Name="TypeSalesID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TypeSalesName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Products_DM" Member="Products_DMs">
+    <Type Name="Products_DM">
+      <Column Name="ProductKey" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProductID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="SAP_ProductCode" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Grams" Type="System.Decimal" DbType="Decimal(8,4)" CanBeNull="true" />
+      <Column Name="Standar_Cost" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="PricePoint" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="UnitsPerCase" Type="System.Decimal" DbType="Decimal(5,0)" CanBeNull="true" />
+      <Column Name="PresentationName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GroupName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SourceName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CategoryName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SubCategoryName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BrandName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SubBrandName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TypeBrandName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SizeName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FlavorName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PresentationID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SourceID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SubCategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BrandID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SubBrandID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TypeBrandID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SizeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FlavorID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
