@@ -1,4 +1,5 @@
 Contexto del Proyecto
+
 Descripción General: El proyecto fue desarrollado para colectar y analizar datos de ventas, utilizando Microsoft SQL Server y sus herramientas de análisis, integración y reporte.
 Propósito: Mejorar la toma de decisiones estratégicas mediante el análisis detallado de las ventas, desglosadas en dimensiones clave: Clientes, Productos y Geografía.
 Estado Actual: El sistema está en funcionamiento desde hace varios años y sigue proporcionando valor a la organización.
