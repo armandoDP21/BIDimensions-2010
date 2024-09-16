@@ -53,6 +53,7 @@ Microsoft SQL Server: Para la gestión de la base de datos, DataMart y tabla de 
 **SQL Server Analysis Services (SSAS)**: Para análisis multidimensional mediante cubos OLAP.
 **SQL Server Reporting Services (SSRS)**: Para generación de informes interactivos.
 **SQL Server Agent**: Para la automatización de la carga de datos y ejecución de paquetes SSIS.
+
 **Dashboard de Usuario**: En la primera versión del proyecto (2010), se desarrolló un dashboard en **VB** para la visualización de indicadores clave, mientras que en la segunda versión (2014) el dashboard fue reescrito y optimizado en **C#** para mejorar la interfaz de usuario y la integración con otras herramientas.
 
 ### Flujo de Datos y Arquitectura
