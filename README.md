@@ -56,11 +56,12 @@ Microsoft SQL Server: Para la gestión de la base de datos, DataMart y tabla de 
 
 **Dashboard de Usuario**: En la primera versión del proyecto (2010), se desarrolló un dashboard en **VB** para la visualización de indicadores clave, mientras que en la segunda versión (2014) el dashboard fue reescrito y optimizado en **C#** para mejorar la interfaz de usuario y la integración con otras herramientas.
 
-### Flujo de Datos y Arquitectura
-Extracción de Datos: Los datos de diversas fuentes operacionales se extraen mediante SSIS.
-Transformación en Sales Staging: Los datos se limpian, transforman y preparan para ser cargados en el DataMart.
-Carga al DataMart: Los datos transformados se cargan en el DataMart, organizados en dimensiones y hechos.
-Análisis y Reportes: Mediante SSAS se crean cubos OLAP para realizar análisis multidimensionales, y con SSRS se generan informes para los tomadores de decisiones.
+**Microsoft SQL Server:** Para la gestión de la base de datos, DataMart y tabla de hechos.
+**SQL Server Integration Services (SSIS)**: Para la carga de datos (ETL).
+**SQL Server Analysis Services (SSAS)**: Para análisis multidimensional mediante cubos OLAP.
+**SQL Server Reporting Services (SSRS)**: Para generación de informes interactivos.
+**SQL Server Agent**: Para la automatización de la carga de datos y ejecución de paquetes SSIS.
+**Dashboard de Usuario**: En la primera versión del proyecto (2010), se desarrolló un dashboard en **VB** para la visualización de indicadores clave, mientras que en la segunda versión (2014) el dashboard fue reescrito y optimizado en **C#** para mejorar la interfaz de usuario y la integración con otras herramientas.
 
 ## Requerimientos de los Usuarios Finales
 Usuarios de Negocio: Requieren informes dinámicos de ventas, con la posibilidad de filtrar y explorar los datos por cliente, producto y región.
